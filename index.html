@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Triplix Holidays | Flights, Hotels &amp; Holiday Packages from Kanpur</title>
+<meta name="description" content="Triplix Holidays, Kanpur. Flights, hotels, honeymoon, pilgrim and custom holiday packages across India and abroad. Compare with us before you book online. WhatsApp 99717 98730." />
+<meta property="og:title" content="Triplix Holidays | Simplifying Every Trip" />
+<meta property="og:description" content="Flights, hotels and complete holidays across India and abroad. Send your dates on WhatsApp for a free quote." />
+<meta property="og:image" content="assets/vn-halong.jpg" />
+<meta name="theme-color" content="#0C1B4D" />
+<link rel="icon" type="image/png" href="assets/triplix-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --navy:#0C1B4D; --navy-2:#142A6E; --board:#0A1436; --flap:#16244F;
+  --blue:#1F6FEA; --blue-ink:#1559C7; --sky:#E9F1FE;
+  --orange:#F47B20; --orange-ink:#B2500B;
+  --paper:#F5F8FD; --white:#FFFFFF;
+  --ink:#0C1B4D; --ink-2:#34426B; --muted:#56628A; --line:#D9E2F1;
+  --ok:#3FD08A;
+  --shell:1180px; --r:18px; --r-s:10px;
+  --sh:0 24px 60px -34px rgba(12,27,77,.45);
+  --sh-s:0 10px 28px -18px rgba(12,27,77,.4);
+  --font:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font-family:var(--font);font-size:16.5px;line-height:1.6;
+  font-stretch:100%;overflow-x:clip;-webkit-font-smoothing:antialiased}
+body.locked{overflow:hidden}
+a{color:inherit}
+img{display:block;max-width:100%}
+button{font:inherit;cursor:pointer;color:inherit}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:6px}
+.shell{width:100%;max-width:var(--shell);margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:var(--font);color:inherit;letter-spacing:-.015em}
+h1{font-size:clamp(2.7rem,6.2vw,4.9rem);font-weight:850;font-stretch:122%;line-height:.96;letter-spacing:-.03em}
+h2{font-size:clamp(1.85rem,4vw,2.85rem);font-weight:800;font-stretch:116%;line-height:1.04}
+h3{font-size:1.22rem;font-weight:750;font-stretch:106%;line-height:1.2}
+.lede{font-size:1.06rem;color:var(--ink-2);max-width:36rem}
+.sec{padding:84px 0}
+section[id]{scroll-margin-top:96px}
+.sec-head{max-width:40rem;margin-bottom:34px}
+.sec-head p{color:var(--ink-2);margin-top:10px}
+.tnum{font-variant-numeric:tabular-nums}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;border:2px solid transparent;
+  border-radius:999px;padding:.82rem 1.45rem;font-weight:700;font-size:.97rem;text-decoration:none;
+  transition:transform .18s,box-shadow .18s,background .18s,color .18s;white-space:nowrap;line-height:1.1}
+.btn svg{width:18px;height:18px;flex:0 0 auto}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+.btn-orange{background:var(--orange);color:var(--navy);box-shadow:0 10px 24px -12px rgba(244,123,32,.8)}
+.btn-orange:hover{box-shadow:0 14px 28px -12px rgba(244,123,32,.9)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-wa{background:#25D366;color:#073B1E}
+.btn-ghost{border-color:var(--line);background:#fff;color:var(--navy)}
+.btn-ghost:hover{border-color:var(--navy)}
+.btn-ghost-dark{border-color:rgba(255,255,255,.35);color:#fff;background:transparent}
+.btn-ghost-dark:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.btn-sm{padding:.58rem 1rem;font-size:.88rem}
+.btn-lg{padding:1rem 1.8rem;font-size:1.03rem}
+.full{width:100%}
+
+/* ---------- header ---------- */
+.hdr{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);
+  border-bottom:1px solid transparent;transition:border-color .25s,box-shadow .25s}
+.hdr.scrolled{border-color:var(--line);box-shadow:0 8px 24px -20px rgba(12,27,77,.5)}
+.hdr-in{display:flex;align-items:center;gap:22px;height:84px}
+.logo{display:block;line-height:0}
+.logo img{height:64px;width:auto}
+.nav{display:flex;gap:24px;margin-left:auto}
+.nav a{text-decoration:none;font-weight:600;font-size:.94rem;color:var(--ink-2);padding:6px 0;border-bottom:2px solid transparent;transition:.2s}
+.nav a:hover{color:var(--navy);border-color:var(--orange)}
+.hdr-cta{display:flex;align-items:center;gap:10px}
+.hdr-call{display:flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;font-size:.95rem;color:var(--navy)}
+.hdr-call svg{width:18px;height:18px;color:var(--blue)}
+.burger{display:none;margin-left:auto;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);
+  background:#fff;align-items:center;justify-content:center}
+.burger svg{width:22px;height:22px}
+.mnav{display:none;position:fixed;inset:84px 0 auto 0;background:#fff;border-bottom:1px solid var(--line);
+  padding:14px 22px 22px;z-index:49;box-shadow:var(--sh)}
+.mnav.open{display:block}
+.mnav a{display:block;padding:13px 2px;text-decoration:none;font-weight:600;border-bottom:1px solid var(--line)}
+.mnav .btn{margin-top:16px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:var(--navy);color:#fff;overflow:hidden;padding:64px 0 150px}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse 60% 70% at 85% 10%,rgba(31,111,234,.38),transparent 62%),
+    radial-gradient(ellipse 40% 50% at 0% 100%,rgba(244,123,32,.16),transparent 62%),
+    radial-gradient(circle,rgba(255,255,255,.07) 1px,transparent 1.4px) 0 0/22px 22px}
+.flightpath{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:.94fr 1.16fr;gap:44px;align-items:center}
+.hero h1{margin:6px 0 20px}
+.hero h1 .stop{color:var(--orange)}
+.hero .lede{color:#C9D5F2}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.hero-meta{display:flex;gap:22px;flex-wrap:wrap;margin-top:30px;color:#AFC0E8;font-size:.92rem}
+.hero-meta span{display:flex;align-items:center;gap:8px}
+.hero-meta svg{width:17px;height:17px;color:var(--orange)}
+.where{display:inline-flex;align-items:flex-start;gap:8px;color:#AFC0E8;font-size:.92rem;font-weight:600}
+.where i{flex:0 0 auto;margin-top:.5em;width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px rgba(63,208,138,.18)}
+
+/* ---------- departure board (signature) ---------- */
+.board{--bf:clamp(11px,.9vw,12.8px);background:var(--board);border-radius:16px;padding:16px 16px 12px;
+  box-shadow:0 40px 80px -40px rgba(0,0,0,.85),inset 0 0 0 1px rgba(255,255,255,.07);font-size:var(--bf);
+  position:relative}
+.board-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;gap:10px}
+.board-title{display:flex;align-items:center;gap:9px;font-weight:800;font-stretch:110%;font-size:1.02rem;color:#fff;letter-spacing:.01em}
+.board-title svg{width:20px;height:20px;color:var(--orange)}
+.board-clock{font-stretch:80%;font-weight:600;color:#9FB2E6;font-size:.9rem;font-variant-numeric:tabular-nums}
+.bhead,.brow{display:grid;grid-template-columns:var(--cols);column-gap:1.1em;align-items:center}
+.board{--cols:10fr 5fr 7fr 8fr}
+.bhead{padding:0 6px 8px;color:#8DA1D6;font-size:.78em;font-weight:700;font-stretch:85%;letter-spacing:.08em;text-transform:uppercase}
+.brow{width:100%;text-align:left;background:transparent;border:0;padding:5px 6px;border-radius:8px;transition:background .2s}
+.brow:hover,.brow:focus-visible{background:rgba(255,255,255,.06)}
+.grp{display:flex;gap:.16em}
+.cell{width:1.18em;height:1.7em;flex:0 0 auto;display:grid;place-items:center;border-radius:3px;
+  /* the flap seam is part of the background, so it sits behind the letter instead of cutting through it */
+  background:linear-gradient(180deg,#1E2E62 0 48.5%,#070D24 48.5% 51.5%,#15234D 51.5% 100%);color:#F3F6FF;font-weight:700;
+  font-stretch:75%;font-size:1em;line-height:1;position:relative;text-transform:uppercase;
+  box-shadow:inset 0 -1px 0 rgba(0,0,0,.35)}
+.cell.flip{animation:flap .11s ease-in}
+@keyframes flap{0%{transform:scaleY(1)}50%{transform:scaleY(.15)}100%{transform:scaleY(1)}}
+.g-fare .cell{color:#FFD7A8}
+.st-board .cell{color:#FF9A47}
+.st-ok .cell{color:#6EE7A8}
+.st-group .cell{color:#9CC2FF}
+.st-ask .cell{color:#E6ECFF}
+.sdot{display:none;width:10px;height:10px;border-radius:50%;justify-self:end}
+.board-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:10px;padding-top:10px;
+  border-top:1px dashed rgba(255,255,255,.14);color:#8DA1D6;font-size:.86rem}
+.board-pager{display:flex;gap:6px}
+.board-pager button{width:30px;height:6px;border-radius:4px;border:0;background:rgba(255,255,255,.18);padding:0}
+.board-pager button.on{background:var(--orange)}
+
+/* ---------- best price compare (most important) ---------- */
+.compare{position:relative;z-index:5;margin-top:-104px}
+.cmp{background:#fff;border-radius:22px;box-shadow:0 40px 90px -40px rgba(12,27,77,.55);display:grid;
+  grid-template-columns:.88fr 1.12fr;overflow:hidden;border:1px solid var(--line)}
+.cmp-copy{background:linear-gradient(160deg,#FFF3E8,#FFE3CC);padding:34px 32px;position:relative}
+.cmp-copy .tag{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:#fff;border-radius:999px;
+  padding:6px 13px;font-size:.84rem;font-weight:700;margin-bottom:16px}
+.cmp-copy .tag svg{width:15px;height:15px;color:var(--orange)}
+.cmp-copy h2{font-size:clamp(1.7rem,3.2vw,2.35rem)}
+.cmp-copy p{color:#5A3A1E;margin-top:12px;font-size:.98rem}
+.cmp-points{list-style:none;margin-top:20px;display:grid;gap:9px}
+.cmp-points li{display:flex;gap:10px;align-items:flex-start;font-weight:600;font-size:.95rem;color:#3D2611}
+.cmp-points svg{width:19px;height:19px;flex:0 0 auto;color:var(--orange-ink);margin-top:2px}
+.cmp-form{padding:28px 30px 30px}
+.tabs{display:flex;gap:6px;background:var(--paper);border-radius:999px;padding:5px;margin-bottom:20px;width:fit-content;max-width:100%}
+.tab{border:0;background:transparent;border-radius:999px;padding:.6rem 1.1rem;font-weight:700;font-size:.92rem;
+  color:var(--ink-2);display:flex;align-items:center;gap:7px}
+.tab svg{width:16px;height:16px}
+.tab[aria-selected="true"]{background:var(--navy);color:#fff}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fgrid .wide{grid-column:1/-1}
+.fld label{display:block;font-size:.84rem;font-weight:700;color:var(--ink-2);margin-bottom:6px}
+.fld label small{font-weight:500;color:var(--muted)}
+.fld input,.fld select,.fld textarea{width:100%;border:1.5px solid var(--line);border-radius:12px;background:#fff;
+  padding:.78rem .9rem;font:inherit;font-size:.97rem;color:var(--ink);transition:border-color .2s,box-shadow .2s}
+.fld textarea{min-height:84px;resize:vertical}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:0;border-color:var(--blue);box-shadow:0 0 0 4px rgba(31,111,234,.14)}
+.fld input[aria-invalid="true"]{border-color:#D43C3C}
+.cmp-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:18px}
+.cmp-note{font-size:.85rem;color:var(--muted)}
+.panel[hidden]{display:none}
+
+/* ---------- boarding-pass packages ---------- */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.chip{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:.55rem 1.1rem;font-weight:700;font-size:.92rem;color:var(--ink-2)}
+.chip[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+.passes{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+.pass{--split:40%;position:relative;display:grid;grid-template-columns:var(--split) 1fr;background:#fff;border-radius:var(--r);
+  box-shadow:var(--sh-s);border:1px solid var(--line);container-type:inline-size;transition:transform .25s,box-shadow .25s}
+.pass:hover{transform:translateY(-4px);box-shadow:var(--sh)}
+.pass::before,.pass::after{content:"";position:absolute;left:calc(var(--split) - 12px);width:24px;height:24px;border-radius:50%;
+  background:var(--paper);border:1px solid var(--line);z-index:2}
+.pass::before{top:-13px;clip-path:inset(50% 0 0 0)}
+.pass::after{bottom:-13px;clip-path:inset(0 0 50% 0)}
+.pass-photo{position:relative;border-radius:var(--r) 0 0 var(--r);overflow:hidden;min-height:250px;background:var(--sky)}
+.pass-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.pass:hover .pass-photo img{transform:scale(1.05)}
+.pass-badge{position:absolute;top:12px;left:12px;background:#fff;color:var(--navy);font-size:.78rem;font-weight:800;
+  padding:5px 10px;border-radius:999px;box-shadow:var(--sh-s)}
+.pass-badge.hot{background:var(--orange);color:var(--navy)}
+.pass-body{padding:20px 22px 20px 26px;border-left:2px dashed var(--line);display:flex;flex-direction:column}
+.route{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center;margin-bottom:12px}
+.route small,.pfield small{display:block;font-size:.68rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.route b{display:block;font-size:.95rem;font-weight:750;line-height:1.25}
+.route .to{text-align:right}
+.route .line{display:flex;align-items:center;gap:6px;color:var(--blue)}
+.route .line i{display:block;width:22px;border-top:2px dotted #A9BCE3}
+.route .line svg{width:18px;height:18px}
+.pass h3{margin-bottom:12px}
+.pfields{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pfield b{display:block;font-size:.9rem;font-weight:650;line-height:1.3}
+.pass-foot{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-top:auto;padding-top:14px;flex-wrap:wrap}
+.fare small{display:block;font-size:.78rem;color:var(--muted);font-weight:600}
+.fare s{color:var(--muted);font-size:.92rem;margin-right:6px}
+.fare b{font-size:1.55rem;font-weight:850;font-stretch:112%;color:var(--navy);font-variant-numeric:tabular-nums}
+.fare em{font-style:normal;display:block;font-size:.78rem;color:var(--orange-ink);font-weight:700}
+.pass-btns{display:flex;gap:8px}
+
+/* ---------- featured Vietnam ---------- */
+.feat{background:var(--sky)}
+.feat-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:start}
+.feat-side{position:sticky;top:108px;display:grid;gap:16px}
+.mosaic{display:grid;grid-template-columns:1.4fr 1fr;grid-template-rows:1fr 1fr;gap:12px;height:440px}
+.mosaic figure{border-radius:16px;overflow:hidden;position:relative;background:#cfdcf5}
+.mosaic figure:first-child{grid-row:span 2}
+.mosaic img{width:100%;height:100%;object-fit:cover}
+.mosaic figcaption{position:absolute;left:10px;bottom:10px;background:rgba(12,27,77,.78);color:#fff;font-size:.8rem;
+  font-weight:600;padding:5px 10px;border-radius:999px;backdrop-filter:blur(6px)}
+.snap{background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh-s);padding:20px 22px}
+.snap-route{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;padding-bottom:16px;border-bottom:1px dashed var(--line)}
+.snap-route small,.snap-facts small{display:block;font-size:.68rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.snap-route b{display:block;font-size:1.35rem;font-weight:850;font-stretch:112%;line-height:1.15}
+.snap-route em{font-style:normal;font-size:.82rem;font-weight:650;color:var(--orange-ink)}
+.snap-route .to{text-align:right}
+.snap-line{display:flex;align-items:center;gap:8px;color:var(--blue)}
+.snap-line i{flex:1;border-top:2px dotted #A9BCE3}
+.snap-line svg{width:22px;height:22px;transform:rotate(90deg)}
+.snap-facts{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:14px 18px;padding:16px 0;border-bottom:1px dashed var(--line)}
+.snap-facts li{display:flex;gap:11px;align-items:center}
+.snap-facts svg{width:38px;height:38px;flex:0 0 auto;padding:9px;border-radius:11px;background:var(--sky);color:var(--blue)}
+.snap-facts b{display:block;font-size:.92rem;font-weight:700;line-height:1.25}
+.snap-cta{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-top:16px;flex-wrap:wrap}
+.snap-cta p{flex:1 1 220px;font-size:.9rem;color:var(--ink-2);line-height:1.45}
+.snap-cta p b{color:var(--navy)}
+.feat-price{display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap;margin:18px 0 22px}
+.feat-price .fare b{font-size:2.3rem}
+.feat-tags{display:flex;gap:8px;flex-wrap:wrap}
+.feat-tags span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:.86rem;font-weight:650}
+.hl{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px 18px;margin:20px 0}
+.hl li{display:flex;gap:9px;font-size:.95rem;color:var(--ink-2)}
+.hl svg{width:18px;height:18px;flex:0 0 auto;color:var(--blue);margin-top:3px}
+.days{list-style:none;margin-top:28px;position:relative}
+.days li{display:grid;grid-template-columns:52px 1fr;gap:14px;padding-bottom:18px;position:relative}
+.days li::before{content:"";position:absolute;left:25px;top:44px;bottom:0;border-left:2px dashed #A9BCE3}
+.days li:last-child::before{display:none}
+.dnum{width:52px;height:52px;border-radius:14px;background:var(--navy);color:#fff;display:grid;place-items:center;
+  font-weight:850;font-stretch:112%;line-height:1;text-align:center;font-size:.72rem}
+.dnum b{display:block;font-size:1.2rem}
+.days h4{font-size:1rem;font-weight:750;margin-top:4px}
+.days p{font-size:.93rem;color:var(--ink-2)}
+
+/* ---------- services ---------- */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line)}
+.svc{padding:26px 24px 26px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:48px 1fr;gap:16px}
+.svc:nth-child(3n+2),.svc:nth-child(3n+3){padding-left:24px;border-left:1px solid var(--line)}
+.svc .ic{width:48px;height:48px;border-radius:14px;background:var(--sky);color:var(--blue);display:grid;place-items:center}
+.svc .ic svg{width:24px;height:24px}
+.svc p{color:var(--ink-2);font-size:.94rem;margin:6px 0 10px}
+.link{background:none;border:0;padding:0;font-weight:700;color:var(--blue-ink);text-decoration:underline;
+  text-underline-offset:3px;text-decoration-thickness:1.5px;font-size:.92rem}
+.link:hover{color:var(--navy)}
+
+/* ---------- destinations ---------- */
+.dest{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.dest::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse 50% 60% at 100% 0%,rgba(31,111,234,.32),transparent 60%),
+             radial-gradient(ellipse 40% 50% at 0% 100%,rgba(244,123,32,.14),transparent 60%)}
+.dest .shell{position:relative}
+.dest .sec-head p{color:#C9D5F2}
+.dest-head{display:flex;justify-content:space-between;align-items:flex-end;gap:22px;flex-wrap:wrap;margin-bottom:28px}
+.dest-head .sec-head{margin:0;max-width:none;flex:1 1 480px}
+.dtabs{position:relative;display:flex;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:5px}
+.dtabs button{position:relative;z-index:1;border:0;background:transparent;color:#C9D5F2;font-weight:700;font-size:.95rem;
+  padding:.72rem 1.25rem;border-radius:999px;transition:color .25s;display:flex;align-items:center;gap:8px;white-space:nowrap}
+.dtabs button svg{width:17px;height:17px;flex:0 0 auto}
+.dtabs button[aria-selected="true"]{color:var(--navy)}
+.dtabs-ind{position:absolute;top:5px;bottom:5px;left:0;border-radius:999px;background:var(--orange);
+  transition:transform .4s cubic-bezier(.2,1,.3,1),width .4s cubic-bezier(.2,1,.3,1);box-shadow:0 8px 20px -10px rgba(244,123,32,.9)}
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:215px;gap:14px}
+.tile{position:relative;overflow:hidden;border-radius:20px;border:0;padding:0;text-align:left;color:#fff;cursor:pointer;isolation:isolate;
+  background:linear-gradient(150deg,#1A3A8F,#0E1E57);box-shadow:0 24px 40px -28px rgba(0,0,0,.8)}
+.tile.big{grid-column:span 2;grid-row:span 2}
+.tile.wide{grid-column:span 2}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.8,.2,1);z-index:-2}
+.tile:hover img,.tile:focus-visible img{transform:scale(1.07)}
+.tile::after{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(8,16,44,0) 35%,rgba(8,16,44,.35) 60%,rgba(8,16,44,.88) 100%)}
+.tile-top{position:absolute;top:14px;left:14px;right:14px;display:flex;gap:7px;flex-wrap:wrap}
+.tile-top span{font-size:.76rem;font-weight:700;padding:5px 10px;border-radius:999px;line-height:1.2}
+.tile-best{background:rgba(8,16,44,.62);backdrop-filter:blur(6px);color:#fff;display:inline-flex;align-items:center;gap:5px}
+.tile-best svg{width:13px;height:13px;flex:0 0 auto;color:#FFB877}
+.tile-pkg{background:var(--orange);color:var(--navy)}
+.tile-body{position:absolute;left:18px;right:16px;bottom:16px;display:flex;align-items:flex-end;justify-content:space-between;gap:12px}
+.tile-body b{display:block;font-size:clamp(1.25rem,1.9vw,1.65rem);font-weight:850;font-stretch:116%;line-height:1.05;letter-spacing:-.02em;
+  text-shadow:0 2px 18px rgba(0,0,0,.35)}
+.tile.big .tile-body b{font-size:clamp(1.9rem,3.6vw,3rem)}
+.tile-body small{display:block;color:#E3EAFB;font-size:.88rem;margin-top:5px;line-height:1.35}
+.tile-go{width:44px;height:44px;border-radius:50%;background:#fff;color:var(--navy);display:grid;place-items:center;flex:0 0 auto;
+  opacity:0;transform:translateY(8px) scale(.9);transition:opacity .3s,transform .3s}
+.tile-go svg{width:20px;height:20px}
+.tile:hover .tile-go,.tile:focus-visible .tile-go{opacity:1;transform:none}
+@media (hover:none){.tile-go{opacity:1;transform:none}}
+.bento.swap .tile{animation:tileIn .55s cubic-bezier(.2,.9,.3,1) both}
+@keyframes tileIn{from{opacity:0;transform:translateY(18px) scale(.97)}to{opacity:1;transform:none}}
+.more-places{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:22px}
+.more-places>span{color:#AFC0E8;font-weight:600;margin-right:4px}
+.mchip{border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.06);color:#fff;border-radius:999px;padding:.55rem 1rem;
+  font-weight:650;font-size:.92rem;display:inline-flex;gap:7px;align-items:center;transition:background .2s,color .2s,border-color .2s}
+.mchip svg{width:15px;height:15px;color:var(--orange)}
+.mchip:hover,.mchip:focus-visible{background:#fff;color:var(--navy);border-color:#fff}
+.mchip.ask{background:var(--orange);color:var(--navy);border-color:var(--orange)}
+.mchip.ask svg{color:var(--navy)}
+img.noimg{visibility:hidden}
+.swipe-hint{display:none;align-items:center;gap:6px;color:#AFC0E8;font-size:.85rem;font-weight:600;margin-top:2px}
+.swipe-hint svg{width:16px;height:16px;color:var(--orange)}
+
+/* ---------- why ---------- */
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.why{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px}
+.why:first-child{grid-column:span 2;background:var(--navy);color:#fff;border-color:var(--navy)}
+.why:first-child p{color:#C9D5F2}
+.why .ic{width:42px;height:42px;border-radius:12px;background:var(--sky);color:var(--blue);display:grid;place-items:center;margin-bottom:14px}
+.why:first-child .ic{background:rgba(244,123,32,.18);color:var(--orange)}
+.why .ic svg{width:22px;height:22px}
+.why h3{font-size:1.06rem}
+.why p{font-size:.92rem;color:var(--ink-2);margin-top:6px}
+
+/* ---------- how it works + group ---------- */
+.steps{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
+.steps li{position:relative;padding-top:58px}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;top:0;left:0;width:44px;height:44px;border-radius:50%;
+  background:#fff;border:2px solid var(--navy);display:grid;place-items:center;font-weight:850;font-stretch:112%;font-size:1.1rem}
+.steps li::after{content:"";position:absolute;top:22px;left:54px;right:-8px;border-top:2px dashed #A9BCE3}
+.steps li:last-child::after{display:none}
+.steps p{font-size:.93rem;color:var(--ink-2);margin-top:6px}
+.group{margin-top:48px;display:grid;grid-template-columns:.9fr 1.1fr;border-radius:22px;overflow:hidden;background:var(--navy);color:#fff}
+.group-img{position:relative;min-height:260px}
+.group-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.group-in{padding:34px}
+.group-in p{color:#C9D5F2;margin:10px 0 20px;max-width:30rem}
+
+/* ---------- inclusions ---------- */
+.incl{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.incl-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px}
+.incl-card h3{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.incl-card h3 svg{width:24px;height:24px}
+.ok-ic{color:#178F57}.no-ic{color:#C53A2E}
+.ilist{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px 16px}
+.ilist li{font-size:.93rem;color:var(--ink-2);display:flex;gap:8px}
+.ilist li::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.45;flex:0 0 auto;margin-top:9px}
+.incl-note{margin-top:16px;font-size:.88rem;color:var(--muted)}
+
+/* ---------- contact ---------- */
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:26px;align-items:stretch}
+.cbox{background:#fff;border:1px solid var(--line);border-radius:20px;padding:30px}
+.crow{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line);text-decoration:none}
+.crow:last-of-type{border-bottom:0}
+.crow .ic{width:44px;height:44px;border-radius:12px;background:var(--sky);color:var(--blue);display:grid;place-items:center}
+.crow .ic svg{width:21px;height:21px}
+.crow small{display:block;font-size:.8rem;color:var(--muted);font-weight:600}
+.crow b{font-weight:700;font-size:1rem;word-break:break-word}
+.map{border-radius:20px;overflow:hidden;border:1px solid var(--line);min-height:360px;background:var(--sky);position:relative}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* ---------- terms ---------- */
+.terms{border:1px solid var(--line);border-radius:16px;background:#fff}
+.terms summary{cursor:pointer;list-style:none;padding:20px 22px;font-weight:750;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.terms summary::-webkit-details-marker{display:none}
+.terms summary svg{width:20px;height:20px;transition:transform .25s;flex:0 0 auto}
+.terms[open] summary svg{transform:rotate(180deg)}
+.terms ul{padding:0 22px 22px 42px;color:var(--ink-2);font-size:.93rem;display:grid;gap:6px}
+
+/* ---------- footer ---------- */
+.ftr{background:#E6EDF9;padding:54px 0 28px;margin-top:30px}
+.ftr-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:30px}
+.ftr .logo{display:inline-block;background:#fff;border-radius:16px;padding:10px 14px;box-shadow:var(--sh-s)}
+.ftr .logo img{height:96px}
+.ftr p{color:var(--ink-2);font-size:.93rem;margin-top:12px;max-width:24rem}
+.ftr h4{font-size:.95rem;font-weight:800;margin-bottom:12px}
+.ftr-links a,.ftr-links button{display:block;text-decoration:none;color:var(--ink-2);font-size:.93rem;padding:4px 0;background:none;border:0;text-align:left}
+.ftr-links a:hover,.ftr-links button:hover{color:var(--navy);text-decoration:underline}
+.ftr-bot{border-top:1px solid #C9D5EC;margin-top:34px;padding-top:18px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.86rem;color:var(--ink-2)}
+.ftr-bot a{color:var(--navy);font-weight:700}
+
+/* ---------- floating + mobile bar ---------- */
+.wa-float{position:fixed;right:20px;bottom:22px;z-index:45;display:flex;align-items:center;gap:10px;text-decoration:none}
+.wa-float .lbl{background:#fff;color:var(--navy);font-weight:700;font-size:.88rem;padding:.55rem .9rem;border-radius:999px;box-shadow:var(--sh-s);border:1px solid var(--line)}
+.wa-float .fab{width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 14px 30px -12px rgba(37,211,102,.75);transition:transform .2s}
+.wa-float:hover .fab{transform:scale(1.07)}
+.wa-float .fab svg{width:30px;height:30px;color:#fff}
+.mbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:46;background:#fff;border-top:1px solid var(--line);
+  padding:8px 10px calc(8px + env(safe-area-inset-bottom));gap:8px;grid-template-columns:1fr 1fr 1.25fr;box-shadow:0 -10px 30px -20px rgba(12,27,77,.5)}
+.mbar a,.mbar button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;border-radius:12px;padding:7px 4px;
+  font-size:.78rem;font-weight:700;text-decoration:none;border:0;min-height:52px}
+.mbar svg{width:20px;height:20px}
+.mbar .m-call{background:var(--sky);color:var(--navy)}
+.mbar .m-wa{background:#25D366;color:#073B1E}
+.mbar .m-quote{background:var(--orange);color:var(--navy)}
+
+/* ---------- modals ---------- */
+.ov{position:fixed;inset:0;z-index:80;background:rgba(8,16,44,.66);backdrop-filter:blur(4px);display:grid;place-items:center;
+  padding:20px;opacity:0;pointer-events:none;transition:opacity .25s}
+.ov.open{opacity:1;pointer-events:auto}
+.sheet{width:100%;max-width:760px;max-height:92vh;overflow-y:auto;background:#fff;border-radius:22px;box-shadow:var(--sh);
+  transform:translateY(24px) scale(.98);transition:transform .3s cubic-bezier(.2,1.1,.4,1);position:relative}
+.ov.open .sheet{transform:none}
+.sheet-sm{max-width:600px}
+.close-btn{position:absolute;top:14px;right:14px;z-index:3;width:42px;height:42px;border-radius:50%;border:0;background:rgba(255,255,255,.94);
+  box-shadow:var(--sh-s);display:grid;place-items:center}
+.close-btn svg{width:20px;height:20px}
+.m-gal{display:flex;gap:6px;overflow-x:auto;scroll-snap-type:x mandatory;border-radius:22px 22px 0 0}
+.m-gal img{height:250px;width:auto;max-width:none;flex:0 0 auto;scroll-snap-align:start;object-fit:cover}
+.m-gal img:only-child{width:100%}
+.m-body{padding:26px 28px 8px}
+.m-body h2{font-size:clamp(1.5rem,3.4vw,2rem)}
+.m-sub{color:var(--ink-2);margin-top:6px}
+.m-sec{margin-top:22px}
+.m-sec h3{font-size:1.02rem;margin-bottom:10px}
+.m-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:7px 16px}
+.m-list li{display:flex;gap:9px;font-size:.93rem;color:var(--ink-2)}
+.m-list svg{width:17px;height:17px;flex:0 0 auto;margin-top:3px}
+.m-list.ok svg{color:#178F57}.m-list.no svg{color:#C53A2E}.m-list.info svg{color:var(--blue)}
+.m-foot{position:sticky;bottom:0;background:#fff;border-top:1px solid var(--line);padding:14px 28px;display:flex;gap:10px;
+  align-items:center;justify-content:space-between;flex-wrap:wrap}
+.m-foot .fare b{font-size:1.4rem}
+.m-foot .btns{display:flex;gap:8px;flex-wrap:wrap}
+.qhead{padding:26px 28px 0}
+.qhead p{color:var(--ink-2);margin-top:6px}
+.qbody{padding:18px 28px 28px}
+.hint{font-size:.8rem;color:#C53A2E;margin-top:4px;display:none}
+.hint.show{display:block}
+
+#toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,160%);z-index:100;background:var(--navy);color:#fff;
+  padding:.8rem 1.2rem;border-radius:12px;font-weight:600;font-size:.92rem;box-shadow:var(--sh);transition:transform .35s cubic-bezier(.2,1.2,.4,1),opacity .25s,visibility .25s;max-width:90vw;opacity:0;visibility:hidden}
+#toast.on{transform:translate(-50%,0);opacity:1;visibility:visible}
+
+/* ---------- responsive ---------- */
+@media (max-width:1100px){
+  .hero-grid{grid-template-columns:1fr;gap:38px}
+  .board{max-width:640px;--bf:13.4px}
+  .cmp{grid-template-columns:1fr}
+  .feat-grid{grid-template-columns:1fr}
+  .feat-side{position:static}
+  .mosaic{height:430px}
+}
+@media (max-width:980px){
+  .nav,.hdr-call{display:none}
+  .burger{display:flex}
+  .hdr-cta{margin-left:auto}
+  .burger{margin-left:0}
+  .passes{grid-template-columns:1fr}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .svc,.svc:nth-child(3n+2),.svc:nth-child(3n+3){padding:22px 18px 22px 0;border-left:0}
+  .svc:nth-child(2n){padding-left:18px;border-left:1px solid var(--line)}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:1fr 1fr;row-gap:28px}
+  .steps li:nth-child(2)::after{display:none}
+  .contact-grid{grid-template-columns:1fr}
+  .ftr-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:720px){
+  .group{grid-template-columns:1fr}
+  .group-img{min-height:200px}
+  .incl{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  body{font-size:16px;padding-bottom:calc(70px + env(safe-area-inset-bottom))}
+  .shell{padding:0 16px}
+  .sec{padding:60px 0}
+  .hdr-in{height:70px;gap:10px}
+  .logo img{height:54px}
+  .mnav{inset:70px 0 auto 0}
+  .hdr-cta .btn{display:none}
+  .hero{padding:40px 0 120px}
+  .hero-cta .btn{flex:1 1 100%}
+  .hero-meta{gap:8px 16px;margin-top:22px;font-size:.88rem}
+  /* 17 flaps + gaps must fit the phone width: size the flaps from the viewport */
+  .board{--bf:clamp(9.5px,3.02vw,13px);padding:13px 11px 10px;--cols:max-content max-content 1fr;border-radius:14px}
+  .g-trip,.g-status,.bh-trip,.bh-status{display:none!important}
+  .sdot{display:block}
+  .bhead,.brow{column-gap:1em}
+  .compare{margin-top:-84px}
+  .cmp-copy{padding:24px 20px}
+  .cmp-form{padding:20px}
+  .tabs{width:100%}
+  .tab{flex:1;justify-content:center;padding:.6rem .5rem}
+  .fgrid{grid-template-columns:1fr}
+  .pass{grid-template-columns:1fr}
+  .pass::before,.pass::after{left:auto;top:calc(56.25cqw - 12px);bottom:auto}
+  .pass::before{left:-13px;clip-path:inset(0 0 0 50%)}
+  .pass::after{right:-13px;clip-path:inset(0 50% 0 0)}
+  .pass-photo{border-radius:var(--r) var(--r) 0 0;min-height:0;aspect-ratio:16/9}
+  .pass-body{border-left:0;border-top:2px dashed var(--line);padding:18px}
+  .pfields{grid-template-columns:1fr 1fr}
+  .pfields .pfield:last-child{grid-column:1/-1}
+  .mosaic{height:340px;grid-template-columns:1fr 1fr}
+  .snap{padding:18px 16px}
+  .snap-facts{grid-template-columns:1fr}
+  .snap-cta .btn{width:100%}
+  .hl,.m-list,.ilist{grid-template-columns:1fr}
+  .svc-grid{grid-template-columns:1fr}
+  .svc,.svc:nth-child(2n),.svc:nth-child(3n+2),.svc:nth-child(3n+3){padding:20px 0;border-left:0}
+  .why-grid{grid-template-columns:1fr}
+  .why:first-child{grid-column:auto}
+  .steps{grid-template-columns:1fr}
+  .steps li::after{display:none}
+  .ftr-grid{grid-template-columns:1fr}
+  .wa-float{display:none}
+  .mbar{display:grid}
+  .ov{padding:0;align-items:end}
+  .sheet{max-height:94vh;border-radius:22px 22px 0 0}
+  .m-gal{border-radius:22px 22px 0 0}
+  .m-gal img{height:200px}
+  .m-body,.qhead{padding-left:18px;padding-right:18px}
+  .qbody{padding:16px 18px 22px}
+  .m-foot{padding:12px 18px calc(12px + env(safe-area-inset-bottom));flex-direction:column;align-items:stretch;gap:10px}
+  .m-foot .fare{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+  .m-foot .fare small{width:100%}
+  .m-foot .btns{display:grid;grid-template-columns:1fr 1.5fr;gap:8px}
+  .m-foot .btns .btn{padding:.8rem .6rem}
+  #toast{bottom:calc(84px + env(safe-area-inset-bottom))}
+}
+@media (max-width:980px){
+  .bento{grid-template-columns:repeat(2,1fr);grid-auto-rows:210px}
+}
+@media (max-width:640px){
+  /* phones: a swipeable row of tall cards instead of a cramped grid */
+  .bento{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px;padding:2px 16px 14px;
+    scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .bento::-webkit-scrollbar{display:none}
+  .tile,.tile.big,.tile.wide{flex:0 0 min(80%,320px);height:340px;scroll-snap-align:start}
+  .tile.big .tile-body b,.tile-body b{font-size:1.75rem}
+  .dest-head{margin-bottom:20px}
+  .dtabs{width:100%}
+  .dtabs button{flex:1;justify-content:center;padding:.7rem .5rem;font-size:.9rem}
+  .swipe-hint{display:flex}
+}
+@media (max-width:359px){
+  .tile.big .tile-body b,.tile-body b{font-size:1.45rem}
+  .m-foot .btns{grid-template-columns:1fr}
+  .pass-btns{width:100%}
+  .pass-btns .btn{flex:1}
+}
+/* ---------- travel cursor (desktop mouse only, enabled from JS) ---------- */
+html.cur-on,html.cur-on *{cursor:none!important}
+html.cur-on input,html.cur-on textarea,html.cur-on select{cursor:auto!important}
+.cur-dot,.cur-plane,.cur-trail{position:fixed;left:0;top:0;pointer-events:none;z-index:9999}
+.cur-dot{width:8px;height:8px;margin:-4px 0 0 -4px;border-radius:50%;background:var(--orange);
+  box-shadow:0 0 0 2px rgba(255,255,255,.85);transition:width .25s,height .25s,margin .25s,background .25s,border-color .25s,opacity .2s;border:2px solid transparent}
+.cur-plane{width:0;height:0}
+.cur-ring{position:absolute;left:0;top:0;width:34px;height:34px;transform:translate(-50%,-50%);border-radius:50%;
+  display:grid;place-items:center;transition:width .35s cubic-bezier(.3,1.5,.5,1),height .35s cubic-bezier(.3,1.5,.5,1),background .3s,opacity .2s}
+.cur-ring::before{content:"";position:absolute;inset:14px;border-radius:50%;border:2px dashed rgba(244,123,32,.65);opacity:0;transition:opacity .3s}
+.cur-orbit{position:absolute;inset:0;display:grid;place-items:center}
+.cur-orbit svg{width:26px;height:26px;color:var(--orange);filter:drop-shadow(0 2px 3px rgba(12,27,77,.55))}
+.cur-ring em{position:relative;font-style:normal;color:#fff;font-weight:800;font-size:.74rem;letter-spacing:.02em;
+  text-align:center;line-height:1.15;max-width:64px;opacity:0;transform:scale(.6);transition:opacity .2s,transform .3s}
+.cur-trail{width:5px;height:5px;margin:-2.5px 0 0 -2.5px;border-radius:50%;background:#7FA6EC;animation:curTrail .8s ease-out forwards}
+@keyframes curTrail{to{opacity:0;transform:scale(.2)}}
+@keyframes curOrbit{to{transform:rotate(360deg)}}
+/* over a link or button: the dot opens into a ring */
+html.cur-link .cur-dot{width:38px;height:38px;margin:-19px 0 0 -19px;background:rgba(244,123,32,.12);border-color:var(--orange);box-shadow:none}
+html.cur-link .cur-ring{opacity:.35}
+/* on orange buttons the orange cursor would vanish, so it turns navy there */
+html.cur-warm .cur-dot{background:transparent;border-color:var(--navy);box-shadow:0 0 0 2px rgba(255,255,255,.7)}
+html.cur-warm .cur-orbit svg{color:var(--navy);filter:drop-shadow(0 1px 2px rgba(255,255,255,.8))}
+html.cur-pkg.cur-warm .cur-orbit svg{color:var(--orange);filter:drop-shadow(0 2px 3px rgba(12,27,77,.55))}
+/* over a package: the plane circles a navy "View trip" badge */
+html.cur-pkg .cur-dot{opacity:0}
+html.cur-pkg .cur-ring{width:104px;height:104px;background:rgba(12,27,77,.92);box-shadow:0 14px 30px -12px rgba(12,27,77,.7)}
+html.cur-pkg .cur-ring::before{opacity:1}
+html.cur-pkg .cur-ring em{opacity:1;transform:none}
+html.cur-pkg .cur-orbit{animation:curOrbit 2.6s linear infinite}
+html.cur-pkg .cur-orbit svg{transform:translateY(-38px) rotate(90deg) scale(.75)!important}
+html.cur-text .cur-dot,html.cur-text .cur-ring,html.cur-out .cur-dot,html.cur-out .cur-ring{opacity:0}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+
+<header class="hdr" id="hdr">
+  <div class="shell hdr-in">
+    <a class="logo" href="#top" aria-label="Triplix Holidays home"><img src="assets/triplix-logo.png" alt="Triplix Holidays, Simplifying Every Trip" width="89" height="64"></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#packages">Packages</a><a href="#services">Services</a><a href="#destinations">Destinations</a>
+      <a href="#why">Why us</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="hdr-cta">
+      <a class="hdr-call" href="tel:+919971798730"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>99717 98730</a>
+      <button class="btn btn-orange btn-sm" data-quote>Get a Free Quote</button>
+    </div>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mnav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+<nav class="mnav" id="mnav" aria-label="Mobile">
+  <a href="#packages">Packages</a><a href="#services">Services</a><a href="#destinations">Destinations</a>
+  <a href="#why">Why us</a><a href="#contact">Contact</a>
+  <button class="btn btn-orange full" data-quote>Get a Free Quote</button>
+</nav>
+
+<main id="top">
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <svg class="flightpath" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs><linearGradient id="trail" x1="0" x2="1"><stop offset="0" stop-color="#1F6FEA" stop-opacity="0"/><stop offset=".6" stop-color="#4C8DF5" stop-opacity=".55"/><stop offset="1" stop-color="#9CC2FF" stop-opacity=".9"/></linearGradient></defs>
+    <path id="fp" d="M-40 560 C 260 300, 640 120, 1240 70" fill="none" stroke="url(#trail)" stroke-width="2.5" stroke-dasharray="2 9" stroke-linecap="round"/>
+    <g id="plane">
+      <path d="M-14 0 L10 -2 L16 0 L10 2 Z M-2 -1 L-8 -11 L-4 -11 L5 -1 Z M-2 1 L-8 11 L-4 11 L5 1 Z M-13 -1 L-16 -6 L-13 -6 L-9 -1 Z M-13 1 L-16 6 L-13 6 L-9 1 Z" fill="#FFFFFF"/>
+      <animateMotion id="fly" dur="16s" repeatCount="indefinite" rotate="auto" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#fp"/></animateMotion>
+    </g>
+  </svg>
+  <div class="shell hero-grid">
+    <div>
+      <span class="where"><i></i>Travel desk in Kanpur, booking across India and abroad</span>
+      <h1>Simplifying every trip<span class="stop">.</span></h1>
+      <p class="lede">Flights, hotels and complete holidays planned around your dates and your budget, by a team you can call or WhatsApp any time.</p>
+      <div class="hero-cta">
+        <button class="btn btn-orange btn-lg" data-quote>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+          Plan My Trip</button>
+        <a class="btn btn-ghost-dark btn-lg" data-wa="Hi Triplix Holidays, I'd like help planning a trip." href="#">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.2-1.2l-.3-.2-2.9.9.9-2.8-.2-.3A8 8 0 1 1 12 20Z"/></svg>
+          WhatsApp Us</a>
+      </div>
+      <div class="hero-meta">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Free quotes</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Every trip can be customised</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Support before and during travel</span>
+      </div>
+    </div>
+
+    <div class="board" id="board" aria-label="Holiday departures board">
+      <div class="board-top">
+        <div class="board-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg><span id="boardTitle">Holidays departing</span></div>
+        <div class="board-clock" id="clock">--:--</div>
+      </div>
+      <div class="bhead" aria-hidden="true"><span>Destination</span><span class="bh-trip">Trip</span><span>Fare from</span><span class="bh-status">Status</span></div>
+      <div id="boardRows"></div>
+      <div class="board-foot"><span>Tap a row to see the trip</span><div class="board-pager" id="pager"><button class="on" aria-label="Packages with fixed fares"></button><button aria-label="More destinations on request"></button></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BEST PRICE PROMISE ================= -->
+<section class="compare" id="compare">
+  <div class="shell">
+    <div class="cmp">
+      <div class="cmp-copy">
+        <span class="tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L2 12V2h10l8.6 8.6a2 2 0 0 1 0 2.8z"/><circle cx="7" cy="7" r="1.5"/></svg>Best Price Promise</span>
+        <h2>Don't book before you compare.</h2>
+        <p>Found a hotel, flight or holiday online? Send us the details first. We compare the options available to us and work to give you a competitive price and better value for your money.</p>
+        <ul class="cmp-points">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Branded 3, 4 and 5 star hotels in India and worldwide</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Rates from a real travel expert, not a bot</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>No hidden charges in your quotation</li>
+        </ul>
+      </div>
+      <div class="cmp-form">
+        <div class="tabs" role="tablist" aria-label="What do you want to compare?">
+          <button class="tab" role="tab" id="t-hotel" aria-controls="p-hotel" aria-selected="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V7l9-4 9 4v14M9 21v-6h6v6M8 10h.01M12 10h.01M16 10h.01"/></svg>Hotel</button>
+          <button class="tab" role="tab" id="t-flight" aria-controls="p-flight" aria-selected="false" tabindex="-1">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>Flight</button>
+          <button class="tab" role="tab" id="t-holiday" aria-controls="p-holiday" aria-selected="false" tabindex="-1">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="10"/></svg>Holiday</button>
+        </div>
+
+        <div class="panel" role="tabpanel" id="p-hotel" aria-labelledby="t-hotel">
+          <div class="fgrid">
+            <div class="fld wide"><label for="h-name">Hotel name</label><input id="h-name" placeholder="e.g. Taj Lake Palace" autocomplete="off"></div>
+            <div class="fld"><label for="h-city">City</label><input id="h-city" placeholder="e.g. Udaipur"></div>
+            <div class="fld"><label for="h-date">Check-in date</label><input id="h-date" type="date"></div>
+            <div class="fld"><label for="h-nights">Nights</label><select id="h-nights"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7+</option></select></div>
+            <div class="fld"><label for="h-rooms">Rooms and guests</label><input id="h-rooms" placeholder="e.g. 1 room, 2 adults"></div>
+            <div class="fld wide"><label for="h-seen">Price you found online <small>(optional)</small></label><input id="h-seen" inputmode="numeric" placeholder="₹ total for the stay"></div>
+          </div>
+        </div>
+        <div class="panel" role="tabpanel" id="p-flight" aria-labelledby="t-flight" hidden>
+          <div class="fgrid">
+            <div class="fld"><label for="f-from">From</label><input id="f-from" placeholder="e.g. Kanpur / Lucknow"></div>
+            <div class="fld"><label for="f-to">To</label><input id="f-to" placeholder="e.g. Bangkok"></div>
+            <div class="fld"><label for="f-date">Departure date</label><input id="f-date" type="date"></div>
+            <div class="fld"><label for="f-ret">Return date <small>(optional)</small></label><input id="f-ret" type="date"></div>
+            <div class="fld"><label for="f-pax">Travellers</label><input id="f-pax" placeholder="e.g. 2 adults, 1 child"></div>
+            <div class="fld"><label for="f-seen">Fare you found online <small>(optional)</small></label><input id="f-seen" inputmode="numeric" placeholder="₹ total"></div>
+          </div>
+        </div>
+        <div class="panel" role="tabpanel" id="p-holiday" aria-labelledby="t-holiday" hidden>
+          <div class="fgrid">
+            <div class="fld"><label for="v-dest">Destination</label><input id="v-dest" list="destList" placeholder="e.g. Kashmir, Bali"></div>
+            <div class="fld"><label for="v-when">When</label><input id="v-when" placeholder="e.g. 15 Dec, or December"></div>
+            <div class="fld"><label for="v-pax">Travellers</label><input id="v-pax" placeholder="e.g. 4 adults"></div>
+            <div class="fld"><label for="v-from">Starting from</label><input id="v-from" placeholder="e.g. Kanpur"></div>
+            <div class="fld wide"><label for="v-seen">Package price you found <small>(optional)</small></label><input id="v-seen" inputmode="numeric" placeholder="₹ per person or total"></div>
+          </div>
+        </div>
+
+        <div class="cmp-actions">
+          <button class="btn btn-wa btn-lg" id="cmpGo">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.2-1.2l-.3-.2-2.9.9.9-2.8-.2-.3A8 8 0 1 1 12 20Z"/></svg>
+            Get today's rate on WhatsApp</button>
+          <span class="cmp-note">Quotes are free. Rates depend on availability on the day.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PACKAGES ================= -->
+<section class="sec" id="packages">
+  <div class="shell">
+    <div class="sec-head">
+      <h2>Holidays ready to book</h2>
+      <p>Hotels, meals and transfers already sorted. Every trip can be changed to suit your dates, group and budget.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Filter packages">
+      <button class="chip" data-f="all" aria-pressed="true">All trips</button>
+      <button class="chip" data-f="india" aria-pressed="false">India and Nepal</button>
+      <button class="chip" data-f="world" aria-pressed="false">International</button>
+    </div>
+    <div class="passes" id="passes"></div>
+  </div>
+</section>
+
+<!-- ================= FEATURED: VIETNAM ================= -->
+<section class="sec feat" id="vietnam">
+  <div class="shell feat-grid">
+    <div class="feat-side">
+    <div class="mosaic">
+      <figure><img data-ph="halong" alt="Limestone islands in Halong Bay, Vietnam" loading="lazy"><figcaption>Halong Bay</figcaption></figure>
+      <figure><img src="assets/vn-coconut.jpg" alt="Basket boats in the Cam Thanh coconut forest" loading="lazy"><figcaption>Coconut Forest</figcaption></figure>
+      <figure><img src="assets/vn-temple.jpg" alt="Temple of Literature gate in Hanoi" loading="lazy"><figcaption>Temple of Literature</figcaption></figure>
+    </div>
+    <div class="snap">
+      <div class="snap-route">
+        <div><small>Fly into</small><b>Hanoi</b><em>2 nights</em></div>
+        <span class="snap-line"><i></i><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/></svg><i></i></span>
+        <div class="to"><small>Fly out of</small><b>Danang</b><em>2 nights</em></div>
+      </div>
+      <ul class="snap-facts">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-6h6v6"/></svg><span><small>Stay</small><b>3-star hotels</b></span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/><path d="M6 1v3M10 1v3M14 1v3"/></svg><span><small>Meals</small><b>Daily breakfast</b></span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 17h14l-1.5-6.5A2 2 0 0 0 15.6 9H8.4a2 2 0 0 0-1.9 1.5z"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></svg><span><small>Transfers</small><b>Private AC cab</b></span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span><small>Guide</small><b>English-speaking</b></span></li>
+      </ul>
+      <div class="snap-cta">
+        <p><b>Want different dates or hotels?</b> We'll reshape this trip around your group and budget.</p>
+        <a class="btn btn-wa btn-sm" href="#" data-wa="Hi Triplix Holidays, I'd like to customise the Vietnam (Hanoi to Danang) package."><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.2-1.2l-.3-.2-2.9.9.9-2.8-.2-.3A8 8 0 1 1 12 20Z"/></svg>Customise on WhatsApp</a>
+      </div>
+    </div>
+    </div>
+    <div>
+      <span class="pass-badge hot" style="position:static;display:inline-block;margin-bottom:14px">Featured package</span>
+      <h2>Vietnam, from Hanoi to Danang</h2>
+      <div class="feat-tags" style="margin-top:14px"><span>4 nights, 5 days</span><span>2 nights Hanoi</span><span>2 nights Danang</span></div>
+      <div class="feat-price">
+        <div class="fare"><small>Starting at, per person</small><b>₹27,999</b></div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn btn-orange" data-book="vietnam">Book Now</button>
+          <button class="btn btn-ghost" data-open="vietnam">Full details</button>
+        </div>
+      </div>
+      <ul class="hl" id="vnHl"></ul>
+      <ol class="days" id="vnDays"></ol>
+      <p class="incl-note">Sample plan. Your final itinerary is confirmed in the quotation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="sec" id="services">
+  <div class="shell">
+    <div class="sec-head">
+      <h2>Everything for the trip, from one desk</h2>
+      <p>From flights and hotels to complete holiday packages, honeymoon getaways, pilgrim journeys and custom international trips.</p>
+    </div>
+    <div class="svc-grid" id="svcGrid"></div>
+  </div>
+</section>
+
+<!-- ================= DESTINATIONS ================= -->
+<section class="sec dest" id="destinations">
+  <div class="shell">
+    <div class="dest-head">
+      <div class="sec-head">
+        <h2>Where do you want to go?</h2>
+        <p>Tap a place to see the trip, or tell us your dates and we'll plan it.</p>
+      </div>
+      <div class="dtabs" role="tablist" aria-label="Choose destinations">
+        <span class="dtabs-ind" aria-hidden="true"></span>
+        <button role="tab" id="dt-india" aria-selected="true" aria-controls="bento" data-d="india">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>Explore India</button>
+        <button role="tab" id="dt-world" aria-selected="false" aria-controls="bento" data-d="world" tabindex="-1">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>Explore the world</button>
+      </div>
+    </div>
+    <div class="bento" id="bento" role="tabpanel" aria-labelledby="dt-india"></div>
+    <p class="swipe-hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Swipe to see more</p>
+    <div class="more-places"><span>We also plan</span><div id="morePlaces" style="display:contents"></div></div>
+  </div>
+</section>
+
+<!-- ================= WHY ================= -->
+<section class="sec" id="why">
+  <div class="shell">
+    <div class="sec-head">
+      <h2>Why travellers choose Triplix</h2>
+      <p>Your journey, our passion. We make travel simple, comfortable and memorable.</p>
+    </div>
+    <div class="why-grid" id="whyGrid"></div>
+  </div>
+</section>
+
+<!-- ================= HOW IT WORKS ================= -->
+<section class="sec" style="padding-top:20px" id="how">
+  <div class="shell">
+    <div class="sec-head"><h2>How booking works</h2></div>
+    <ol class="steps">
+      <li><h3>Tell us your plan</h3><p>Send your destination, dates and number of travellers on WhatsApp, a call, or the form.</p></li>
+      <li><h3>Get your quotation</h3><p>We share options with the exact hotels, inclusions and price, then adjust it until it fits.</p></li>
+      <li><h3>Confirm the booking</h3><p>Your booking is confirmed once the required payment is received.</p></li>
+      <li><h3>Travel with support</h3><p>Our team stays reachable on phone and WhatsApp before and during your trip.</p></li>
+    </ol>
+    <div class="group">
+      <div class="group-img"><img data-ph="bali-rice" alt="Rice terraces in Bali" loading="lazy"></div>
+      <div class="group-in">
+        <h2>Travelling as a group?</h2>
+        <p>Special pricing may be available for group bookings. Several of our packages are priced for groups of four, and we plan larger family and office trips too.</p>
+        <button class="btn btn-orange" data-quote data-type="Group trip">Ask for group pricing</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INCLUSIONS ================= -->
+<section class="sec" style="padding-top:20px">
+  <div class="shell">
+    <div class="sec-head"><h2>What a package usually covers</h2>
+      <p>Depending on the package you choose. Exact inclusions are written in the quotation for each booking.</p></div>
+    <div class="incl">
+      <div class="incl-card">
+        <h3><svg class="ok-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg>Usually included</h3>
+        <ul class="ilist ok-ic" id="inclList"></ul>
+      </div>
+      <div class="incl-card">
+        <h3><svg class="no-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6M9 9l6 6"/></svg>Not included unless mentioned</h3>
+        <ul class="ilist no-ic" id="exclList"></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="sec" id="contact" style="padding-top:20px">
+  <div class="shell">
+    <div class="sec-head"><h2>Talk to a travel expert</h2>
+      <p>Call, WhatsApp or visit us in Kanpur. Send your travel dates and requirements for a personalised quotation.</p></div>
+    <div class="contact-grid">
+      <div class="cbox">
+        <a class="crow" href="tel:+919971798730"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span><span><small>Call</small><b>+91 99717 98730</b></span></a>
+        <a class="crow" href="#" data-wa="Hi Triplix Holidays, I'd like to talk to a travel expert."><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.2-1.2l-.3-.2-2.9.9.9-2.8-.2-.3A8 8 0 1 1 12 20Z"/></svg></span><span><small>WhatsApp</small><b>+91 99717 98730</b></span></a>
+        <a class="crow" href="mailto:triplixholidays@gmail.com"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></span><span><small>Email</small><b>triplixholidays@gmail.com</b></span></a>
+        <a class="crow" href="https://www.instagram.com/triplixholidays/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span><span><small>Instagram</small><b>@triplixholidays</b></span></a>
+        <a class="crow" href="https://www.google.com/maps/search/?api=1&amp;query=SRGP+Complex+Tatmil+Chauraha+Kanpur" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span><small>Office</small><b>87, 88 Upper Ground Floor, SRGP Complex, Tatmil Chauraha, Kanpur</b></span></a>
+        <button class="btn btn-orange full" style="margin-top:18px" data-quote>Get a Free Quote</button>
+      </div>
+      <div class="map"><iframe title="Map showing Tatmil Chauraha, Kanpur" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?q=Tatmil%20Chauraha%2C%20Kanpur&amp;z=15&amp;output=embed"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TERMS ================= -->
+<section style="padding:0 0 70px">
+  <div class="shell">
+    <details class="terms" id="terms">
+      <summary>Booking terms and conditions <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary>
+      <ul id="termsList"></ul>
+    </details>
+  </div>
+</section>
+</main>
+
+<footer class="ftr">
+  <div class="shell">
+    <div class="ftr-grid">
+      <div>
+        <a class="logo" href="#top"><img src="assets/triplix-logo.png" alt="Triplix Holidays, Simplifying Every Trip" width="134" height="96"></a>
+        <p>Flights, hotels, honeymoon, pilgrim and custom holiday packages across India and around the world.</p>
+      </div>
+      <div class="ftr-links"><h4>Explore</h4>
+        <a href="#packages">Holiday packages</a><a href="#vietnam">Vietnam package</a><a href="#services">Services</a>
+        <a href="#destinations">Destinations</a><a href="#compare">Best Price Promise</a></div>
+      <div class="ftr-links"><h4>Contact</h4>
+        <a href="tel:+919971798730">+91 99717 98730</a><a href="mailto:triplixholidays@gmail.com">triplixholidays@gmail.com</a>
+        <a href="https://www.instagram.com/triplixholidays/" target="_blank" rel="noopener">Instagram @triplixholidays</a>
+        <button type="button" id="openTerms">Terms and conditions</button></div>
+    </div>
+    <div class="ftr-bot">
+      <span>© <span id="yr"></span> Triplix Holidays. All rights reserved.</span>
+      <span>Website by <a href="https://digiyaan360.netlify.app/" target="_blank" rel="noopener">Digiyaan360</a></span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="#" data-wa="Hi Triplix Holidays, I'd like to talk to a travel expert." aria-label="Talk to a travel expert on WhatsApp">
+  <span class="lbl">Talk to a travel expert</span>
+  <span class="fab"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.2-1.2l-.3-.2-2.9.9.9-2.8-.2-.3A8 8 0 1 1 12 20Z"/><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.6.2s-.7.9-.9 1.1c-.2.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.4.1-.6l.5-.5c.1-.2.2-.3.3-.5s0-.4 0-.5-.6-1.5-.8-2-.5-.5-.6-.5h-.6c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3 2 3.1 5 4.3c.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.6.2-1.2.2-1.3l-.5-.2Z"/></svg></span>
+</a>
+
+<div class="mbar" role="navigation" aria-label="Quick contact">
+  <a class="m-call" href="tel:+919971798730"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a class="m-wa" href="#" data-wa="Hi Triplix Holidays, I'd like help planning a trip."><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.2-1.2l-.3-.2-2.9.9.9-2.8-.2-.3A8 8 0 1 1 12 20Z"/></svg>WhatsApp</a>
+  <button class="m-quote" data-quote><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg>Get a Free Quote</button>
+</div>
+
+<!-- package modal -->
+<div class="ov" id="pkgOv" role="dialog" aria-modal="true" aria-labelledby="pkgTitle">
+  <div class="sheet" id="pkgSheet"></div>
+</div>
+<!-- quote modal -->
+<div class="ov" id="qOv" role="dialog" aria-modal="true" aria-labelledby="qTitle">
+  <div class="sheet sheet-sm">
+    <button class="close-btn" data-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <div class="qhead"><h2 id="qTitle" style="font-size:1.7rem">Plan my trip</h2><p>Tell us the basics. We'll reply on WhatsApp with options and a free quote.</p></div>
+    <div class="qbody">
+      <div class="fgrid">
+        <div class="fld"><label for="q-name">Your name</label><input id="q-name" autocomplete="name"><p class="hint" id="q-name-h">Please enter your name.</p></div>
+        <div class="fld"><label for="q-phone">Phone or WhatsApp</label><input id="q-phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="10-digit mobile"><p class="hint" id="q-phone-h">Please enter a 10-digit mobile number.</p></div>
+        <div class="fld"><label for="q-dest">Where to?</label><input id="q-dest" list="destList" placeholder="e.g. Thailand"></div>
+        <div class="fld"><label for="q-when">When</label><input id="q-when" placeholder="e.g. 20 Dec, or December"></div>
+        <div class="fld"><label for="q-adults">Adults</label><select id="q-adults"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10+</option></select></div>
+        <div class="fld"><label for="q-kids">Children</label><select id="q-kids"><option selected>0</option><option>1</option><option>2</option><option>3</option><option>4+</option></select></div>
+        <div class="fld"><label for="q-type">Trip type</label><select id="q-type"><option>Holiday</option><option>Honeymoon</option><option>Pilgrimage</option><option>Family trip</option><option>Group trip</option><option>Flights only</option><option>Hotel only</option><option>Visa help</option></select></div>
+        <div class="fld"><label for="q-from">Starting from</label><input id="q-from" placeholder="e.g. Kanpur"></div>
+        <div class="fld wide"><label for="q-note">Anything else? <small>(optional)</small></label><textarea id="q-note" placeholder="Budget, hotel category, places you want to include..."></textarea></div>
+      </div>
+      <button class="btn btn-wa btn-lg full" id="qGo" style="margin-top:16px">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.2-1.2l-.3-.2-2.9.9.9-2.8-.2-.3A8 8 0 1 1 12 20Z"/></svg>
+        Send on WhatsApp</button>
+    </div>
+  </div>
+</div>
+
+<datalist id="destList"></datalist>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+"use strict";
+var d=document,$=function(s,r){return (r||d).querySelector(s)},$$=function(s,r){return [].slice.call((r||d).querySelectorAll(s))};
+var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* =============================================================
+   SETTINGS — edit these when details change
+   ============================================================= */
+var CFG={brand:'Triplix Holidays', wa:'919971798730',
+  localPhotos:false   /* set true after running download-photos.mjs */
+};
+
+/* Packages. Prices are per person. `was` shows a struck-out original price.
+   price:null shows "On request". Photos live in /assets. */
+var PACKAGES=[
+ {id:'vietnam',region:'world',title:'Vietnam, Hanoi to Danang',from:'Hanoi',to:'Danang',dur:'4N / 5D',stay:'3★ hotels',meals:'Daily breakfast',
+  price:27999,was:null,fareNote:'Starting at, per person',badge:'Featured',hot:true,
+  gallery:['halong','vn-coconut','vn-temple','vn-cave','vn-basket'],
+  board:{dest:'VIETNAM',status:'FEATURED',st:'board'},
+  sub:'4 nights, 5 days: 2 nights in Hanoi and 2 nights in Danang.',
+  highlights:['3-star hotel stay','Daily breakfast','Private AC cab','English-speaking guide','Hanoi city tour','Danang city tour','Boat ride','Sightseeing as per itinerary','Private transfers'],
+  days:[['Arrive in Hanoi','Airport pickup and check-in. Afternoon city tour of the Temple of Literature and Hoa Lo Prison.'],
+        ['Halong Bay cruise','Cruise between limestone islands, walk through Surprising Cave, climb Titop Island for the view and try kayaking. Lunch on board.'],
+        ['Hanoi to Danang','Check out and transfer to the airport for your onward flight to Danang. Evening at leisure.'],
+        ['Danang and Coconut Forest','Danang city tour and a basket-boat ride through the Cam Thanh coconut forest, with a local lunch.'],
+        ['Departure','Transfer to Danang International Airport.']],
+  addons:['Ninh Binh day trip with Hoa Lu and the Tam Coc boat ride','Bana Hills and the Golden Bridge, with cable car'],
+  excl:['Airfare, including the Hanoi to Danang flight unless quoted','Visa fees','Travel insurance','Meals other than those mentioned','Tips, personal expenses and optional activities'],
+  notes:['Sample itinerary. Your final plan is confirmed in the quotation.']},
+ {id:'thailand',region:'world',title:'Thailand, Bangkok and Pattaya',from:'Bangkok',to:'Pattaya',dur:'4N / 5D',stay:'4★ Ramada',meals:'Daily breakfast',
+  price:17999,was:null,fareNote:'Just, per person',badge:'Best seller',
+  gallery:['th-palace','th-watarun','th-cruise','th-boat'],
+  board:{dest:'THAILAND',status:'ON TIME',st:'ok'},
+  sub:'4 nights, 5 days across Bangkok and Pattaya.',
+  highlights:['4-star Ramada hotel','Daily breakfast','Dinner cruise with Indian dinner','Speed boat trip with lunch','Grand Palace and temples','Beaches, shopping and nightlife'],
+  days:null,
+  excl:['Airfare','Visa fees','Travel insurance','Meals other than those mentioned','Tips, personal expenses and optional activities'],
+  notes:['Your day-wise plan is shared with the quotation.']},
+ {id:'kashmir',region:'india',title:'Kashmir, heaven on earth',from:'Srinagar',to:'Gulmarg, Pahalgam',dur:'4N / 5D',stay:'3★ + houseboat',meals:'Breakfast and dinner',
+  price:8999,was:12999,fareNote:'Discounted, per person',group:'Best price for a group of 4',badge:'Lowest fare',
+  gallery:['kashmir','ks-shikara','ks-sonamarg'],
+  board:{dest:'KASHMIR',status:'GROUP 4+',st:'group'},
+  sub:'4 nights, 5 days with Srinagar airport or railway station pickup and drop.',
+  highlights:['3-star hotel stay','One night in a Srinagar houseboat','1-hour shikara ride on Dal Lake','Travel by Ertiga','Breakfast and dinner','Tolls and driver allowance included','Welcome drink on arrival','Srinagar airport or railway pickup and drop'],
+  days:[['Arrive in Srinagar','Transfer to the hotel, then the Mughal Gardens (Nishat, Shalimar and Chashme Shahi) and Shankaracharya Temple. Evening shikara ride on Dal Lake.'],
+        ['Gulmarg day trip','Drive via Tangmarg with a stop at Drung Waterfall. Maharani Temple, St. Mary\u2019s Church, the golf course and more. Gondola and ATV rides at own cost.'],
+        ['Pahalgam','Saffron fields, Awantipora ruins, a bat factory, Apple Valley and Martand Sun Temple on the way. Aru, Betaab and Chandanwari valleys by local union vehicle at own cost. Overnight in Pahalgam.'],
+        ['Sonamarg','Hazratbal, Ganderbal and the Sindh river on the way, through the Z-Morh tunnel. Thajiwas Glacier by pony and Zero Point by union vehicle at own cost. Overnight in a houseboat.'],
+        ['Departure','Check out from the houseboat and transfer to Srinagar airport, railway station or bus stand.']],
+  excl:['Air tickets, trains and ferries','5% GST extra','Entrance fees and local guides','Cable car and pony rides in Pahalgam, Gulmarg and Sonamarg','Adventure activities like rides and paragliding','Personal expenses like laundry, shopping and tips','Increases due to weather, road blocks, strikes or disturbances'],
+  notes:['Only post-paid mobile connections of BSNL, Jio and Airtel work in Jammu and Kashmir.']},
+ {id:'nepal',region:'india',title:'Nepal, land of the Himalayas',from:'Gorakhpur',to:'Pokhara, Kathmandu',dur:'4N / 5D',stay:'3★ hotels',meals:'Breakfast and dinner',
+  price:15999,was:19999,fareNote:'Offer price, per person',group:'Best price for a group of 4',
+  gallery:['nepal','np-boudha','np-lake'],
+  board:{dest:'NEPAL',status:'GROUP 4+',st:'group'},
+  sub:'4 nights, 5 days: 2 nights in Pokhara and 2 nights in Kathmandu, by road from Gorakhpur.',
+  highlights:['Pickup and drop at Gorakhpur','2 nights Pokhara, 2 nights Kathmandu','Affordable 3-star hotels','Breakfast and dinner every day','Swift Dzire with driver allowance','Petrol and tolls included','All sightseeing included','Manokamna and Pashupatinath temples'],
+  days:[['Gorakhpur to Pokhara via Lumbini','Morning pickup at Gorakhpur station, border formalities at Sonauli, then Lumbini: Maya Devi Temple, Ashoka Pillar and the Sacred Garden. Evening boating on Phewa Lake. About 8 to 9 hours.'],
+        ['Pokhara sightseeing','Optional Sarangkot sunrise. Devi\u2019s Fall, Gupteshwar Cave, Bindhyabasini Temple and the World Peace Pagoda. Evening at Lakeside market.'],
+        ['Pokhara to Kathmandu via Manokamna','Cable car up to the Manokamna temple (ropeway paid directly). Evening at Thamel market. About 6 to 7 hours.'],
+        ['Kathmandu sightseeing','Pashupatinath Temple and Boudhanath Stupa in the morning. Swayambhunath and Patan Durbar Square in the afternoon.'],
+        ['Kathmandu to Gorakhpur','Drive back via the Sonauli border and drop at Gorakhpur railway station. About 8 to 9 hours.']],
+  excl:['Monument and entry tickets','Lunch','Camera charges where applicable','Travel insurance','Personal expenses','Services not listed under inclusions'],
+  notes:['Indian citizens should carry a valid government photo ID (Voter ID or passport). Aadhaar may be accepted at the border but is not an official travel document.','The itinerary may change with weather, road conditions or local rules.','Carry warm clothes, comfortable walking shoes and essential medicines.']},
+ {id:'darjeeling',region:'india',title:'Gangtok and Darjeeling',from:'NJP / Bagdogra',to:'Gangtok, Darjeeling',dur:'4N / 5D',stay:'Super deluxe',meals:'Breakfast and dinner',
+  price:12999,was:15999,fareNote:'Offer price, per person',group:'Best price for a group of 4',
+  gallery:['darjeeling','gd-train','gd-tsomgo','gd-batasia'],
+  board:{dest:'DARJEELING',status:'GROUP 4+',st:'group'},
+  sub:'4 nights, 5 days: 2 nights in Gangtok and 2 nights in Darjeeling. Mountains, monasteries, memories.',
+  highlights:['Pickup and drop at NJP railway station or Bagdogra airport','Super deluxe hotels','Breakfast and dinner','All transfers and sightseeing by private vehicle','Choice of Scorpio, Innova or Dzire','Driver allowance, fuel, parking and tolls included'],
+  days:[['Arrive and drive to Gangtok','125 km along the Teesta river, about 4 to 5 hours. Evening on MG Marg for shopping and cafes.'],
+        ['Tsomgo Lake, Baba Mandir and Nathula','Tsomgo (Changu) Lake, yak rides, Baba Harbhajan Singh Mandir and Nathula Pass. Permit and valid ID required.'],
+        ['Gangtok to Darjeeling','100 km through valleys and tea gardens with views of Kanchenjunga. Evening walk on Chowrasta Mall Road. Toy train joy ride optional at extra cost.'],
+        ['Darjeeling sightseeing','Tiger Hill sunrise, Ghoom Monastery, Batasia Loop, the Himalayan Mountaineering Institute, the zoo, Tibetan Refugee Centre, a tea estate and the Japanese Peace Pagoda.'],
+        ['Departure','Breakfast, check out and drive 100 km to NJP or Bagdogra.']],
+  excl:['Airfare and train tickets','Entry tickets and permits fees','Toy train joy ride and ropeway','Lunch and personal expenses','Travel insurance'],
+  notes:['Nathula Pass needs a permit and is closed on Mondays and Tuesdays for Indian nationals.','Darjeeling Zoo and HMI are closed on Thursdays. Tibetan Refugee Centre is closed on Sundays. Ropeway is closed on the 19th of every month.']},
+ {id:'singapore',region:'world',title:'Singapore city break',from:'Changi Airport',to:'Singapore',dur:'3N / 4D',stay:'3★ hotel',meals:'Breakfast',
+  price:null,was:null,fareNote:'Price depends on dates and hotel',
+  gallery:['sg-gardens','sg-merlion','sg-cloud','sg-dome'],
+  board:{dest:'SINGAPORE',status:'ENQUIRE',st:'ask'},
+  sub:'3 nights with theme parks, the city tour and Gardens by the Bay.',
+  highlights:['Universal Studios tickets','3-hour guided city tour with Merlion Park','Gardens by the Bay: Flower Dome and Cloud Forest','Marina Bay SkyPark observation deck','Destination pass: Zoo, River Wonders, Night Safari, Bird Paradise','Private airport transfers','SIM and travel insurance'],
+  days:[['Arrive in Singapore','Private pickup at Changi Airport and transfer to your hotel.'],
+        ['Universal Studios','A full day across seven themed zones. Open 10 am to 8 pm.'],
+        ['City tour and Gardens by the Bay','Financial District, Suntec City and Merlion Park, then the Flower Dome and Cloud Forest, and Marina Bay SkyPark from 5 pm for sunset.'],
+        ['Departure','Private transfer to Changi Airport.']],
+  excl:['Airfare','Visa fees','Meals other than breakfast','Personal expenses'],
+  notes:['Submit the SG Arrival Card online before you land.','Hotel check-in is 3 pm and check-out is 12 noon.','The shared city tour ends at Little India.']}
+];
+/* Shown on page 2 of the departure board. */
+var ON_REQUEST=['BALI','DUBAI','MALDIVES','SRI LANKA','MALAYSIA','EUROPE'];
+
+var INDIA=['Kashmir','Himachal Pradesh','Uttarakhand','Rajasthan','Kerala','Goa','Andaman','Northeast India','Gujarat','Maharashtra'];
+var WORLD=['Vietnam','Thailand','Bali','Sri Lanka','Dubai','Singapore','Malaysia','Maldives','Europe'];
+
+var SERVICES=[
+ ['Flight booking','Domestic and international flights from leading airlines, with suitable fares and convenient options for your route.','Flights only','<path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>'],
+ ['Hotel booking','Budget hotels to premium stays and resorts, chosen for your destination, budget and preferences.','Hotel only','<path d="M3 21V7l9-4 9 4v14M9 21v-6h6v6M8 10h.01M12 10h.01M16 10h.01"/>'],
+ ['Honeymoon packages','Romantic holidays for couples, with destinations, hotels, transfers, sightseeing and special experiences.','Honeymoon','<path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z"/>'],
+ ['Pilgrim packages','Comfortable, well-planned pilgrimages to popular spiritual destinations across India and beyond.','Pilgrimage','<path d="M12 2 9 6h6zM6 21V10h12v11M3 21h18M10 21v-5h4v5M12 6v4"/>'],
+ ['Customised itineraries','Not a standard package person? Tell us your dates, interests and budget, and we build the trip around them.','Holiday','<path d="M9 18 3 21V6l6-3 6 3 6-3v15l-6 3z"/><path d="M9 3v15M15 6v15"/>'],
+ ['Visa assistance','Guidance and documentation support for visa applications for selected international destinations.','Visa help','<rect x="4" y="2" width="16" height="20" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M8 17h8"/>'],
+ ['Domestic and international holidays','Complete holidays in India and abroad, with flights, hotels, transfers, sightseeing and activities in one booking.','Holiday','<circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/>']
+];
+var WHY=[
+ ['Competitive prices','We compare the travel options available to us to find the right price for your trip.','<path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L2 12V2h10l8.6 8.6a2 2 0 0 1 0 2.8z"/><circle cx="7" cy="7" r="1.5"/>'],
+ ['Personalised planning','Every traveller is different, so we shape each itinerary to your needs.','<rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>'],
+ ['Domestic and international','One travel partner for holidays in India and abroad.','<circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/>'],
+ ['Personal assistance','Support from our team before and during your trip.','<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/>'],
+ ['Handpicked stays','Hotels chosen by location, budget, category and what you need.','<path d="M3 21V7l9-4 9 4v14M9 21v-6h6v6"/>'],
+ ['Flexible itineraries','Change your trip to fit your interests, schedule and budget.','<path d="M9 18 3 21V6l6-3 6 3 6-3v15l-6 3z"/>'],
+ ['Easy communication','Quick help over phone and WhatsApp.','<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>']
+];
+var INCL=['Hotel accommodation','Daily breakfast','Airport transfers','Private vehicle','Driver or guide','Sightseeing','City tours','Boat rides or cruises where mentioned','Activities mentioned in the itinerary','Assistance during the trip'];
+var EXCL=['International or domestic airfare','Visa fees','Travel insurance','Personal expenses','Laundry','Telephone expenses','Shopping','Tips and gratuities','Meals other than those mentioned','Optional activities','Additional sightseeing','Early check-in or late check-out charges','Additional vehicle use','Government taxes or GST, if applicable','Any service not listed under inclusions'];
+var TERMS=['All prices are subject to availability at the time of booking.','Prices may change without prior notice due to airfare, hotel rates, currency changes, taxes or supplier pricing.','Package inclusions and exclusions are specified in the quotation.','Booking confirmation is subject to receipt of the required payment.','Hotel check-in and check-out follow the respective hotel\u2019s policy.','Flight schedules and fares are subject to airline rules.','Visa approval is solely at the discretion of the respective embassy or consulate.','Triplix Holidays can assist with visa documentation but does not guarantee visa approval.','Cancellation and amendment charges depend on the respective airline, hotel, DMC, supplier or package terms.','Additional services requested after confirmation may carry extra charges.','Customers are responsible for giving accurate passenger and travel-document details.'];
+
+/* ============================================================= */
+var IMG=function(n){return photoURL(n,900)};
+var inr=function(n){return '\u20B9'+n.toLocaleString('en-IN')};
+/* =============================================================
+   PHOTOS
+   `web`   — free Unsplash / Pexels photo (commercial use, no attribution needed)
+   `local` — the client's own photo in /assets, used if the web photo can't load
+   To host every photo yourself: run `node download-photos.mjs`, then set
+   CFG.localPhotos = true. The block between the markers is read by that script.
+   ============================================================= */
+/* PHOTOS:START */
+var PHOTOS={
+ 'halong':     {web:'https://images.unsplash.com/photo-1431975071466-2c609dac5956',local:'vn-halong'},
+ 'kashmir':    {web:'https://images.unsplash.com/photo-1760585249721-ae9832aeb157',local:'ks-shikara'},
+ 'th-palace':  {web:'https://images.unsplash.com/photo-1528181304800-259b08848526',local:'th-arun'},
+ 'th-watarun': {web:'https://images.unsplash.com/photo-1563492065599-3520f775eeed',local:'th-arun'},
+ 'th-phiphi':  {web:'https://images.unsplash.com/photo-1506665531195-3566af2b4dfa',local:'th-boat'},
+ 'nepal':      {web:'https://images.pexels.com/photos/14989389/pexels-photo-14989389.jpeg',local:'np-lake'},
+ 'darjeeling': {web:'https://images.unsplash.com/photo-1647157438772-3841f0d41f77',local:'gd-town'},
+ 'jaipur':     {web:'https://images.unsplash.com/photo-1524229648276-e66561fe45a9'},
+ 'kerala':     {web:'https://images.pexels.com/photos/36998153/pexels-photo-36998153.jpeg'},
+ 'maldives':   {web:'https://images.unsplash.com/photo-1514282401047-d79a71a590e8'},
+ 'bali':       {web:'https://images.unsplash.com/photo-1537996194471-e657df975ab4'},
+ 'bali-rice':  {web:'https://images.unsplash.com/photo-1555400038-63f5ba517a47',local:'gd-town'},
+ 'dubai':      {web:'https://images.unsplash.com/photo-1512453979798-5ea266f8880c'}
+};
+/* PHOTOS:END */
+function photoURL(key,w){
+  var p=PHOTOS[key];
+  if(!p)return 'assets/'+key+'.jpg';                       /* client photo kept in /assets */
+  if(CFG.localPhotos)return 'assets/photos/'+key+'.jpg';   /* after running download-photos.mjs */
+  w=w||1200;
+  if(p.web.indexOf('images.unsplash.com')>-1)return p.web+'?auto=format&fit=crop&w='+w+'&q=75';
+  if(p.web.indexOf('images.pexels.com')>-1)return p.web+'?auto=compress&cs=tinysrgb&w='+w;
+  return p.web;
+}
+function fallbackURL(key){var p=PHOTOS[key];return p&&p.local?'assets/'+p.local+'.jpg':''}
+function imgTag(key,alt,w,extra){
+  var fb=fallbackURL(key);
+  return '<img src="'+photoURL(key,w)+'"'+(fb?' data-fb="'+fb+'"':'')+' alt="'+esc(alt||'')+'" loading="lazy" decoding="async"'+(extra||'')+'>';
+}
+/* if a web photo can't load (offline, blocked, removed), swap in the client's own photo;
+   with no local copy the tile keeps its brand-coloured background instead of a broken icon */
+function rescue(img){
+  var gal=img.closest('.m-gal');
+  if(img.dataset.fb&&!img.dataset.fbUsed){
+    /* in a pop-up gallery, drop it rather than show the same client photo twice */
+    if(gal&&[].some.call(gal.querySelectorAll('img'),function(o){return o!==img&&o.getAttribute('src')===img.dataset.fb})){img.remove();return}
+    img.dataset.fbUsed='1';img.src=img.dataset.fb;return}
+  if(gal){img.remove();return}
+  img.classList.add('noimg');
+}
+d.addEventListener('error',function(e){var t=e.target;if(t&&t.tagName==='IMG')rescue(t)},true);
+
+var esc=function(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;')};
+var ICK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>';
+var IX='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M18 6 6 18M6 6l12 12"/></svg>';
+var IINFO='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>';
+var IPLANE='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z" transform="rotate(90 12 12)"/></svg>';
+function waURL(msg){return 'https://wa.me/'+CFG.wa+'?text='+encodeURIComponent(msg)}
+function openWA(msg){window.open(waURL(msg),'_blank','noopener')}
+function toast(m){var t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(t._t);t._t=setTimeout(function(){t.classList.remove('on')},2600)}
+function pkg(id){return PACKAGES.filter(function(p){return p.id===id})[0]}
+$('#yr').textContent=new Date().getFullYear();
+$$('img[data-ph]').forEach(function(img){var k=img.dataset.ph,fb=fallbackURL(k);if(fb)img.dataset.fb=fb;img.src=photoURL(k,1200)});
+
+/* every [data-wa] link opens WhatsApp with its own message */
+d.addEventListener('click',function(e){var a=e.target.closest('[data-wa]');if(!a)return;e.preventDefault();openWA(a.getAttribute('data-wa'))});
+
+/* ---------- header ---------- */
+var hdr=$('#hdr');
+function onScroll(){hdr.classList.toggle('scrolled',window.scrollY>8)}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+var burger=$('#burger'),mnav=$('#mnav');
+burger.addEventListener('click',function(){var o=mnav.classList.toggle('open');burger.setAttribute('aria-expanded',o)});
+$$('#mnav a').forEach(function(a){a.addEventListener('click',function(){mnav.classList.remove('open');burger.setAttribute('aria-expanded','false')})});
+
+/* ---------- datalist ---------- */
+$('#destList').innerHTML=INDIA.concat(WORLD,['Nepal','Gangtok and Darjeeling','Hong Kong']).map(function(x){return '<option value="'+esc(x)+'">'}).join('');
+
+/* ---------- departure board ---------- */
+var COLS=[['g-dest',10],['g-trip',5],['g-fare',7],['g-status',8]];
+var rowsEl=$('#boardRows'),ROWS=6,rowEls=[];
+var FLAPS='ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+function mkRow(){
+  var b=d.createElement('button');b.className='brow';b.type='button';
+  COLS.forEach(function(c){var g=d.createElement('span');g.className='grp '+c[0];g.setAttribute('aria-hidden','true');
+    for(var i=0;i<c[1];i++){var s=d.createElement('span');s.className='cell';s.textContent='\u00A0';s.dataset.ch=' ';g.appendChild(s)}
+    b.appendChild(g)});
+  var dot=d.createElement('span');dot.className='sdot';dot.setAttribute('aria-hidden','true');b.appendChild(dot);
+  rowsEl.appendChild(b);return b;
+}
+for(var r=0;r<ROWS;r++)rowEls.push(mkRow());
+function flipCell(cell,ch,delay){
+  ch=ch||' ';if(cell.dataset.ch===ch)return;
+  var show=function(c){cell.textContent=c===' '?'\u00A0':c};
+  if(reduce){show(ch);cell.dataset.ch=ch;return}
+  cell.dataset.ch=ch;
+  setTimeout(function(){
+    var n=2+Math.floor(Math.random()*4);
+    (function tick(){
+      cell.classList.remove('flip');void cell.offsetWidth;cell.classList.add('flip');
+      if(n--<=0){show(cell.dataset.ch);return}
+      show(FLAPS[Math.floor(Math.random()*FLAPS.length)]);setTimeout(tick,62);
+    })();
+  },delay);
+}
+function setGroup(row,cls,text,base){
+  var cells=$$('.'+cls+' .cell',row),t=(text||'').toUpperCase();
+  cells.forEach(function(c,i){flipCell(c,t.charAt(i),base+i*34)});
+}
+var DOTS={board:'#FF9A47',ok:'#6EE7A8',group:'#9CC2FF',ask:'#E6ECFF'};
+function boardData(page){
+  if(page===0)return PACKAGES.map(function(p){return {dest:p.board.dest,trip:p.dur.replace(/\s/g,''),
+    fare:p.price?inr(p.price):'QUOTE',status:p.board.status,st:p.board.st,id:p.id,
+    label:p.title+', '+p.dur.replace('/','to')+(p.price?', from '+inr(p.price)+' per person':', price on request')+'. View details.'}});
+  return ON_REQUEST.map(function(n){return {dest:n,trip:'',fare:'QUOTE',status:'ENQUIRE',st:'ask',dest_q:n,
+    label:n.charAt(0)+n.slice(1).toLowerCase()+', price on request. Ask for a quote.'}});
+}
+var page=0;
+function paint(p){
+  page=p;var data=boardData(p);
+  $('#boardTitle').textContent=p===0?'Holidays departing':'More destinations';
+  $$('#pager button').forEach(function(b,i){b.classList.toggle('on',i===p)});
+  rowEls.forEach(function(row,i){
+    var r=data[i]||{dest:'',trip:'',fare:'',status:'',st:'ask'};var base=i*90;
+    setGroup(row,'g-dest',r.dest,base);setGroup(row,'g-trip',r.trip,base+60);
+    setGroup(row,'g-fare',r.fare,base+120);setGroup(row,'g-status',r.status,base+180);
+    var st=$('.g-status',row);st.className='grp g-status st-'+r.st;
+    $('.sdot',row).style.background=DOTS[r.st];
+    row.dataset.id=r.id||'';row.dataset.q=r.dest_q||'';row.setAttribute('aria-label',r.label||'');
+  });
+}
+paint(0);
+rowsEl.addEventListener('click',function(e){var row=e.target.closest('.brow');if(!row)return;
+  if(row.dataset.id)openPkg(row.dataset.id);
+  else if(row.dataset.q)openQuote({dest:row.dataset.q.charAt(0)+row.dataset.q.slice(1).toLowerCase()})});
+$$('#pager button').forEach(function(b,i){b.addEventListener('click',function(){paint(i);restart()})});
+/* the board pages between fixed-fare packages and on-request destinations,
+   but only while it's on screen and the visitor isn't interacting with it */
+var timer=null,visible=true,hold=false;
+function restart(){clearInterval(timer);if(reduce)return;timer=setInterval(function(){if(visible&&!hold)paint(page?0:1)},9000)}
+var board=$('#board');
+board.addEventListener('mouseenter',function(){hold=true});board.addEventListener('mouseleave',function(){hold=false});
+board.addEventListener('focusin',function(){hold=true});board.addEventListener('focusout',function(){hold=false});
+if('IntersectionObserver' in window)new IntersectionObserver(function(es){visible=es[0].isIntersecting}).observe(board);
+restart();
+(function clock(){var n=new Date();$('#clock').textContent=('0'+n.getHours()).slice(-2)+':'+('0'+n.getMinutes()).slice(-2)+' IST';setTimeout(clock,20000)})();
+if(reduce){var fly=d.getElementById('fly');if(fly&&fly.parentNode)fly.parentNode.removeChild(fly);$('#plane').setAttribute('transform','translate(980 92) rotate(-8)')}
+
+/* ---------- best price compare ---------- */
+var tabs=$$('.tab');
+function selectTab(t){tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;
+  $('#'+x.getAttribute('aria-controls')).hidden=!on})}
+tabs.forEach(function(t,i){
+  t.addEventListener('click',function(){selectTab(t)});
+  t.addEventListener('keydown',function(e){var k=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(!k)return;
+    var n=tabs[(i+k+tabs.length)%tabs.length];selectTab(n);n.focus()});
+});
+function val(id){return ($('#'+id).value||'').trim()}
+function need(ids){var miss=null;ids.forEach(function(id){var el=$('#'+id),bad=!val(id);el.setAttribute('aria-invalid',bad);if(bad&&!miss)miss=el});
+  if(miss){miss.focus();toast('Please fill in '+$('label[for="'+miss.id+'"]').textContent.replace(/\(optional\)/,'').trim().toLowerCase()+'.')}return !miss}
+function line(k,v){return v?'\n*'+k+':* '+v:''}
+function day(id){var v=val(id);if(!/^\d{4}-\d{2}-\d{2}$/.test(v))return v;
+  var t=new Date(v+'T00:00:00');return t.toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'})}
+$('#cmpGo').addEventListener('click',function(){
+  var t=$('.tab[aria-selected="true"]').id,m='';
+  if(t==='t-hotel'){if(!need(['h-name','h-city','h-date']))return;
+    m='Hi Triplix Holidays, please send me today\'s hotel rate.\n'+line('Hotel',val('h-name'))+line('City',val('h-city'))+
+      line('Check-in',day('h-date'))+line('Nights',val('h-nights'))+line('Rooms and guests',val('h-rooms'))+(val('h-seen')?line('Price I found online','\u20B9'+val('h-seen')):'');}
+  else if(t==='t-flight'){if(!need(['f-from','f-to','f-date']))return;
+    m='Hi Triplix Holidays, please check your best fare for this flight.\n'+line('From',val('f-from'))+line('To',val('f-to'))+
+      line('Departure',day('f-date'))+line('Return',day('f-ret'))+line('Travellers',val('f-pax'))+(val('f-seen')?line('Fare I found online','\u20B9'+val('f-seen')):'');}
+  else{if(!need(['v-dest','v-when']))return;
+    m='Hi Triplix Holidays, please compare this holiday for me.\n'+line('Destination',val('v-dest'))+line('When',val('v-when'))+
+      line('Travellers',val('v-pax'))+line('Starting from',val('v-from'))+(val('v-seen')?line('Price I found','\u20B9'+val('v-seen')):'');}
+  openWA(m);toast('Opening WhatsApp');
+});
+
+/* ---------- boarding-pass cards ---------- */
+function passHTML(p){
+  var fare=p.price?'<b>'+inr(p.price)+'</b>':'<b style="font-size:1.15rem">On request</b>';
+  return '<article class="pass" data-region="'+p.region+'">'+
+    '<div class="pass-photo">'+imgTag(p.gallery[0],p.title,900)+
+      (p.badge?'<span class="pass-badge'+(p.hot?' hot':'')+'">'+p.badge+'</span>':'')+'</div>'+
+    '<div class="pass-body">'+
+      '<div class="route"><div><small>From</small><b>'+esc(p.from)+'</b></div><span class="line" aria-hidden="true"><i></i>'+IPLANE+'<i></i></span>'+
+        '<div class="to"><small>To</small><b>'+esc(p.to)+'</b></div></div>'+
+      '<h3>'+esc(p.title)+'</h3>'+
+      '<div class="pfields"><div class="pfield"><small>Duration</small><b>'+p.dur+'</b></div>'+
+        '<div class="pfield"><small>Stay</small><b>'+p.stay+'</b></div><div class="pfield"><small>Meals</small><b>'+p.meals+'</b></div></div>'+
+      '<div class="pass-foot"><div class="fare"><small>'+p.fareNote+'</small>'+(p.was?'<s>'+inr(p.was)+'</s>':'')+fare+
+        (p.group?'<em>'+p.group+'</em>':'')+'</div>'+
+        '<div class="pass-btns"><button class="btn btn-ghost btn-sm" data-open="'+p.id+'">Details</button>'+
+        '<button class="btn btn-orange btn-sm" data-book="'+p.id+'">Book Now</button></div></div>'+
+    '</div></article>';
+}
+var passes=$('#passes');passes.innerHTML=PACKAGES.map(passHTML).join('');
+$$('.chip').forEach(function(c){c.addEventListener('click',function(){
+  $$('.chip').forEach(function(x){x.setAttribute('aria-pressed',x===c)});var f=c.dataset.f;
+  $$('.pass',passes).forEach(function(el){el.hidden=!(f==='all'||el.dataset.region===f)});
+})});
+
+/* ---------- featured Vietnam ---------- */
+var vn=pkg('vietnam');
+$('#vnHl').innerHTML=vn.highlights.map(function(h){return '<li>'+ICK+h+'</li>'}).join('');
+$('#vnDays').innerHTML=vn.days.map(function(x,i){return '<li><span class="dnum"><span>Day<b>'+(i+1)+'</b></span></span><div><h4>'+x[0]+'</h4><p>'+x[1]+'</p></div></li>'}).join('');
+
+/* ---------- services, destinations, why, lists ---------- */
+$('#svcGrid').innerHTML=SERVICES.map(function(s){return '<div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">'+s[3]+'</svg></span>'+
+  '<div><h3>'+s[0]+'</h3><p>'+s[1]+'</p><button class="link" data-quote data-type="'+s[2]+'">Get a quote</button></div></div>'}).join('');
+/* ---------- destinations ---------- */
+var DEST={
+ india:{tiles:[
+   {name:'Kashmir',line:'Dal Lake, Gulmarg and Pahalgam',best:'Mar\u2013Oct',ph:'kashmir',pkg:'kashmir'},
+   {name:'Rajasthan',line:'Forts, palaces and desert camps',best:'Oct\u2013Mar',ph:'jaipur'},
+   {name:'Kerala',line:'Backwaters, tea hills and beaches',best:'Sep\u2013Mar',ph:'kerala'},
+   {name:'Northeast India',line:'Darjeeling, Gangtok and the Himalaya',best:'Mar\u2013May, Oct\u2013Dec',ph:'darjeeling',pkg:'darjeeling'}],
+  more:['Himachal Pradesh','Uttarakhand','Goa','Andaman','Gujarat','Maharashtra']},
+ world:{tiles:[
+   {name:'Maldives',line:'Overwater villas and coral lagoons',best:'Nov\u2013Apr',ph:'maldives'},
+   {name:'Thailand',line:'Islands, temples and nightlife',best:'Nov\u2013Mar',ph:'th-phiphi',pkg:'thailand'},
+   {name:'Bali',line:'Temples, rice terraces and beach clubs',best:'Apr\u2013Oct',ph:'bali'},
+   {name:'Dubai',line:'Skyline, desert safari and shopping',best:'Nov\u2013Mar',ph:'dubai'},
+   {name:'Vietnam',line:'Halong Bay to Danang',best:'Feb\u2013Apr',ph:'halong',pkg:'vietnam'},
+   {name:'Singapore',line:'Gardens, theme parks and the city',best:'All year',ph:'sg-gardens',pkg:'singapore'}],
+  more:['Sri Lanka','Malaysia','Europe']}
+};
+var SIZE=['big','wide','','','wide','wide'];
+var ICAL='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>';
+var IARROW='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+var IPIN='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>';
+function renderDest(which,animate){
+  var set=DEST[which],bento=$('#bento');
+  bento.innerHTML=set.tiles.map(function(t,i){
+    var p=t.pkg?pkg(t.pkg):null;
+    var tag=p?(p.price?'Package from '+inr(p.price):'Package available'):'';
+    var label=t.name+'. '+t.line+'. Best time '+t.best+'.'+(p?' '+tag+'. View the trip.':' Get a quote.');
+    return '<button class="tile '+(SIZE[i]||'')+'" '+(p?'data-open="'+p.id+'"':'data-quote data-dest="'+esc(t.name)+'"')+' aria-label="'+esc(label)+'">'+
+      imgTag(t.ph,t.name,SIZE[i]==='big'?1400:900,' aria-hidden="true"')+
+      '<span class="tile-top" aria-hidden="true"><span class="tile-best">'+ICAL+'Best '+t.best+'</span>'+(tag?'<span class="tile-pkg">'+tag+'</span>':'')+'</span>'+
+      '<span class="tile-body" aria-hidden="true"><span><b>'+t.name+'</b><small>'+t.line+'</small></span><span class="tile-go">'+IARROW+'</span></span>'+
+    '</button>'}).join('');
+  $('#morePlaces').innerHTML=set.more.map(function(x){return '<button class="mchip" data-quote data-dest="'+esc(x)+'">'+IPIN+x+'</button>'}).join('')+
+    '<button class="mchip ask" data-quote>Somewhere else?</button>';
+  bento.setAttribute('aria-labelledby','dt-'+which);
+  if(animate&&!reduce){bento.classList.remove('swap');void bento.offsetWidth;bento.classList.add('swap')}
+}
+var dtabs=$$('.dtabs button'),dind=$('.dtabs-ind');
+function moveInd(btn){dind.style.width=btn.offsetWidth+'px';dind.style.transform='translateX('+btn.offsetLeft+'px)'}
+function pickDest(btn,animate){
+  dtabs.forEach(function(b){var on=b===btn;b.setAttribute('aria-selected',on);b.tabIndex=on?0:-1});
+  moveInd(btn);renderDest(btn.dataset.d,animate);
+}
+dtabs.forEach(function(b,i){
+  b.addEventListener('click',function(){if(b.getAttribute('aria-selected')!=='true')pickDest(b,true)});
+  b.addEventListener('keydown',function(e){var k=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(!k)return;
+    var n=dtabs[(i+k+dtabs.length)%dtabs.length];pickDest(n,true);n.focus()});
+});
+pickDest(dtabs[0],false);
+window.addEventListener('resize',function(){moveInd($('.dtabs button[aria-selected="true"]'))});
+if(d.fonts&&d.fonts.ready)d.fonts.ready.then(function(){moveInd($('.dtabs button[aria-selected="true"]'))});
+$('#whyGrid').innerHTML=WHY.map(function(w){return '<div class="why"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">'+w[2]+'</svg></span><h3>'+w[0]+'</h3><p>'+w[1]+'</p></div>'}).join('');
+$('#inclList').innerHTML=INCL.map(function(x){return '<li>'+x+'</li>'}).join('');
+$('#exclList').innerHTML=EXCL.map(function(x){return '<li>'+x+'</li>'}).join('');
+$('#termsList').innerHTML=TERMS.map(function(x){return '<li>'+x+'</li>'}).join('');
+$('#openTerms').addEventListener('click',function(){var t=$('#terms');t.open=true;t.scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'})});
+
+/* ---------- modals ---------- */
+var lastFocus=null,openOv=null;
+function showOv(ov,focusSel){lastFocus=d.activeElement;openOv=ov;ov.classList.add('open');d.body.classList.add('locked');
+  setTimeout(function(){var f=$(focusSel||'[data-close]',ov);if(f)f.focus()},60)}
+function hideOv(){if(!openOv)return;openOv.classList.remove('open');openOv=null;d.body.classList.remove('locked');if(lastFocus&&lastFocus.focus)lastFocus.focus()}
+$$('.ov').forEach(function(ov){ov.addEventListener('click',function(e){if(e.target===ov||e.target.closest('[data-close]'))hideOv()})});
+d.addEventListener('keydown',function(e){
+  if(e.key==='Escape')hideOv();
+  if(e.key==='Tab'&&openOv){var f=$$('button,a[href],input,select,textarea',openOv).filter(function(x){return x.offsetParent!==null});
+    if(!f.length)return;var a=f[0],z=f[f.length-1];
+    if(e.shiftKey&&d.activeElement===a){e.preventDefault();z.focus()}else if(!e.shiftKey&&d.activeElement===z){e.preventDefault();a.focus()}}
+});
+
+function listHTML(items,cls,icon){return '<ul class="m-list '+cls+'">'+items.map(function(x){return '<li>'+icon+'<span>'+x+'</span></li>'}).join('')+'</ul>'}
+function openPkg(id){
+  var p=pkg(id);if(!p)return;
+  var h='<button class="close-btn" data-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button>'+
+   '<div class="m-gal">'+p.gallery.map(function(g){return imgTag(g,'',900)}).join('')+'</div>'+
+   '<div class="m-body"><h2 id="pkgTitle">'+esc(p.title)+'</h2><p class="m-sub">'+esc(p.sub)+'</p>'+
+   '<div class="m-sec"><h3>Highlights</h3>'+listHTML(p.highlights,'ok',ICK)+'</div>';
+  if(p.days)h+='<div class="m-sec"><h3>Day by day</h3><ol class="days" style="margin-top:6px">'+p.days.map(function(x,i){
+    return '<li><span class="dnum"><span>Day<b>'+(i+1)+'</b></span></span><div><h4>'+x[0]+'</h4><p>'+x[1]+'</p></div></li>'}).join('')+'</ol></div>';
+  if(p.addons)h+='<div class="m-sec"><h3>Popular add-ons</h3>'+listHTML(p.addons,'info',IINFO)+'</div>';
+  h+='<div class="m-sec"><h3>Not included</h3>'+listHTML(p.excl,'no',IX)+'</div>';
+  if(p.notes)h+='<div class="m-sec"><h3>Good to know</h3>'+listHTML(p.notes,'info',IINFO)+'</div>';
+  h+='<p class="incl-note" style="margin:18px 0 6px">Exact inclusions are confirmed in your quotation. Prices depend on availability on the day of booking.</p></div>'+
+   '<div class="m-foot"><div class="fare"><small>'+p.fareNote+'</small>'+(p.was?'<s>'+inr(p.was)+'</s>':'')+
+     (p.price?'<b>'+inr(p.price)+'</b>':'<b>On request</b>')+'</div>'+
+   '<div class="btns"><button class="btn btn-ghost" data-customise="'+p.id+'">Customise</button><button class="btn btn-wa" data-book="'+p.id+'">Book on WhatsApp</button></div></div>';
+  $('#pkgSheet').innerHTML=h;$('#pkgSheet').scrollTop=0;showOv($('#pkgOv'));
+}
+function bookMsg(p){return 'Hi Triplix Holidays, I\'d like to book the *'+p.title+'* package ('+p.dur+').'+
+  (p.price?'\nFare shown: '+inr(p.price)+' per person.':'')+'\n\nTravel dates: \nNumber of travellers: \nStarting from: \n\nPlease share availability and the final quote.'}
+d.addEventListener('click',function(e){
+  var o=e.target.closest('[data-open]');if(o){openPkg(o.dataset.open);return}
+  var b=e.target.closest('[data-book]');if(b){openWA(bookMsg(pkg(b.dataset.book)));toast('Opening WhatsApp');return}
+  var c=e.target.closest('[data-customise]');if(c){var p=pkg(c.dataset.customise);hideOv();setTimeout(function(){openQuote({dest:p.title.split(',')[0],type:'Holiday',note:'Based on the '+p.title+' package. I\'d like to change: '})},80);return}
+  var q=e.target.closest('[data-quote]');if(q){openQuote({dest:q.dataset.dest,type:q.dataset.type});mnav.classList.remove('open')}
+});
+
+function openQuote(o){
+  o=o||{};
+  /* reset trip-specific fields each time so one enquiry never leaks into the next;
+     name and phone are kept so a returning visitor doesn't retype them */
+  $('#q-dest').value=o.dest||'';
+  $('#q-note').value=o.note||'';
+  var s=$('#q-type');s.value='Holiday';
+  if(o.type)[].forEach.call(s.options,function(op){if(op.text===o.type)s.value=op.text});
+  $('#qTitle').textContent=o.dest?'Plan my trip to '+o.dest:'Plan my trip';
+  showOv($('#qOv'),'#q-name');
+}
+$('#qGo').addEventListener('click',function(){
+  var name=val('q-name'),phone=val('q-phone').replace(/\D/g,'').slice(-10),ok=true;
+  $('#q-name-h').classList.toggle('show',!name);$('#q-name').setAttribute('aria-invalid',!name);
+  var badPh=phone.length!==10;$('#q-phone-h').classList.toggle('show',badPh);$('#q-phone').setAttribute('aria-invalid',badPh);
+  if(!name){$('#q-name').focus();ok=false}else if(badPh){$('#q-phone').focus();ok=false}
+  if(!ok)return;
+  var m='Hi Triplix Holidays, I\'d like a free quote.\n'+line('Name',name)+line('Phone',phone)+line('Trip type',val('q-type'))+
+    line('Destination',val('q-dest'))+line('When',val('q-when'))+line('Travellers',val('q-adults')+' adult(s)'+(val('q-kids')!=='0'?', '+val('q-kids')+' child(ren)':''))+
+    line('Starting from',val('q-from'))+line('Notes',val('q-note'));
+  openWA(m);toast('Opening WhatsApp');hideOv();
+});
+$$('img').forEach(function(img){if(img.complete&&img.naturalWidth===0&&img.getAttribute('src'))rescue(img)});
+
+/* travel cursor: a plane chases the pointer leaving a contrail, and circles a badge over packages */
+(function(){
+  if(reduce||!window.matchMedia('(hover:hover) and (pointer:fine)').matches)return;
+  var root=document.documentElement,body=document.body;
+  var dot=document.createElement('div');dot.className='cur-dot';
+  var plane=document.createElement('div');plane.className='cur-plane';
+  plane.innerHTML='<span class="cur-ring"><span class="cur-orbit"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/></svg></span><em></em></span>';
+  dot.setAttribute('aria-hidden','true');plane.setAttribute('aria-hidden','true');
+  body.appendChild(plane);body.appendChild(dot);
+  var svg=plane.querySelector('svg'),label=plane.querySelector('em');
+  var mx=-100,my=-100,px=-100,py=-100,ang=0,lastTx=0,lastTy=0,started=false;
+  var PKG='.pass,.tile,#vietnam .mosaic',LINK='a,button,[role="button"],label,.chip';
+  function mode(m){root.classList.remove('cur-link','cur-pkg','cur-text');if(m)root.classList.add('cur-'+m)}
+  var WARM='.btn-orange,.pass-badge.hot';
+  document.addEventListener('mousemove',function(e){
+    mx=e.clientX;my=e.clientY;
+    if(!started){started=true;px=mx;py=my;lastTx=mx;lastTy=my;root.classList.add('cur-on');requestAnimationFrame(tick)}
+    root.classList.remove('cur-out');
+  },{passive:true});
+  document.addEventListener('mouseover',function(e){
+    var t=e.target;
+    root.classList.toggle('cur-warm',!!t.closest(WARM));
+    if(t.closest('input,textarea,select,[contenteditable="true"]'))return mode('text');
+    var p=t.closest(PKG);
+    if(p){
+      var b=t.closest('button,a');
+      label.textContent=b&&p.contains(b)&&b!==p?b.textContent.trim():p.classList.contains('tile')?'Explore':p.classList.contains('mosaic')?'Vietnam':'View trip';
+      return mode('pkg');
+    }
+    mode(t.closest(LINK)?'link':'');
+  });
+  document.addEventListener('mouseleave',function(){root.classList.add('cur-out')});
+  function tick(){
+    var dx=mx-px,dy=my-py;
+    px+=dx*.2;py+=dy*.2;
+    if(dx*dx+dy*dy>9){
+      // turn the nose toward the pointer by the shortest way round
+      var target=Math.atan2(dy,dx)*180/Math.PI+90,diff=((target-ang)%360+540)%360-180;
+      ang+=diff*.18;
+    }
+    dot.style.transform='translate3d('+mx+'px,'+my+'px,0)';
+    plane.style.transform='translate3d('+px+'px,'+py+'px,0)';
+    svg.style.transform='rotate('+ang+'deg)';
+    var tx=px-lastTx,ty=py-lastTy;
+    if(tx*tx+ty*ty>196&&!root.classList.contains('cur-pkg')){
+      lastTx=px;lastTy=py;
+      var s=document.createElement('span');s.className='cur-trail';s.setAttribute('aria-hidden','true');
+      s.style.left=px+'px';s.style.top=py+'px';
+      s.addEventListener('animationend',function(){s.remove()});
+      body.appendChild(s);
+    }else if(root.classList.contains('cur-pkg')){lastTx=px;lastTy=py}
+    requestAnimationFrame(tick);
+  }
+})();
+})();
+</script>
+</body>
+</html>
