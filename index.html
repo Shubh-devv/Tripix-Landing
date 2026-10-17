@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<title>Triplix Holidays | Flights, Hotels &amp; Holiday Packages from Kanpur</title>
-<meta name="description" content="Triplix Holidays, Kanpur. Flights, hotels, honeymoon, pilgrim and custom holiday packages across India and abroad. Compare with us before you book online. WhatsApp 99717 98730." />
+<title>Triplix Holidays | Flights, Hotels &amp; Holiday Packages Across India</title>
+<meta name="description" content="Triplix Holidays. Flights, hotels, honeymoon, pilgrim and custom holiday packages for travellers from every city in India. Hotel rates cheaper than online platforms. WhatsApp 99717 98730." />
 <meta property="og:title" content="Triplix Holidays | Simplifying Every Trip" />
 <meta property="og:description" content="Flights, hotels and complete holidays across India and abroad. Send your dates on WhatsApp for a free quote." />
 <meta property="og:image" content="assets/vn-halong.jpg" />
@@ -391,7 +391,7 @@ img.noimg{visibility:hidden}
 .wa-float:hover .fab{transform:scale(1.07)}
 .wa-float .fab svg{width:30px;height:30px;color:#fff}
 .mbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:46;background:#fff;border-top:1px solid var(--line);
-  padding:8px 10px calc(8px + env(safe-area-inset-bottom));gap:8px;grid-template-columns:1fr 1fr 1.25fr;box-shadow:0 -10px 30px -20px rgba(12,27,77,.5)}
+  padding:8px 10px calc(8px + env(safe-area-inset-bottom));gap:6px;grid-template-columns:1fr 1fr 1fr 1.3fr;box-shadow:0 -10px 30px -20px rgba(12,27,77,.5)}
 .mbar a,.mbar button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;border-radius:12px;padding:7px 4px;
   font-size:.78rem;font-weight:700;text-decoration:none;border:0;min-height:52px}
 .mbar svg{width:20px;height:20px}
@@ -436,6 +436,53 @@ img.noimg{visibility:hidden}
   padding:.8rem 1.2rem;border-radius:12px;font-weight:600;font-size:.92rem;box-shadow:var(--sh);transition:transform .35s cubic-bezier(.2,1.2,.4,1),opacity .25s,visibility .25s;max-width:90vw;opacity:0;visibility:hidden}
 #toast.on{transform:translate(-50%,0);opacity:1;visibility:visible}
 
+/* ---------- video testimonial ---------- */
+.tst{padding-bottom:20px}
+.tst-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px;align-items:center}
+.tst-media{position:relative;border-radius:22px;overflow:hidden;background:var(--board);aspect-ratio:4/5;max-height:620px;
+  box-shadow:0 40px 80px -40px rgba(12,27,77,.7);isolation:isolate}
+/* a blurred copy of the poster fills any letterbox space around the video */
+.tst-media::before{content:"";position:absolute;inset:-30px;z-index:-1;background:url(assets/testimonial-poster.jpg) center/cover;filter:blur(28px) brightness(.55)}
+.tst-media video,.tst-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.tst-media img{object-fit:cover}
+.tst-badge{position:absolute;top:14px;left:14px;display:inline-flex;align-items:center;gap:8px;background:rgba(8,16,44,.7);backdrop-filter:blur(6px);
+  color:#fff;font-size:.8rem;font-weight:700;padding:6px 12px;border-radius:999px;pointer-events:none}
+.tst-badge i{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 3px rgba(63,208,138,.25)}
+.tst-copy .tag{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:#fff;border-radius:999px;
+  padding:6px 13px;font-size:.84rem;font-weight:700;margin-bottom:16px}
+.tst-copy .tag svg{width:15px;height:15px;color:var(--orange)}
+.tst-copy>p{color:var(--ink-2);margin-top:12px;max-width:34rem}
+.tst-points li{color:var(--ink)}
+.tst-points svg{color:var(--blue)}
+
+/* ---------- face-to-face meeting ---------- */
+.btn-meet{background:#fff;color:var(--navy)}
+.btn-meet:hover{box-shadow:0 14px 28px -14px rgba(255,255,255,.6)}
+.btn-navy svg,.btn-meet svg{color:var(--orange)}
+.meet-float{position:fixed;right:20px;bottom:94px;z-index:45;display:flex;flex-direction:row-reverse;align-items:center;gap:10px;border:0;background:none;padding:0}
+.meet-float .fab{width:58px;height:58px;border-radius:50%;background:var(--navy);display:grid;place-items:center;
+  box-shadow:0 14px 30px -12px rgba(12,27,77,.75);transition:transform .2s;position:relative}
+.meet-float .fab::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:2px solid var(--orange);opacity:0;animation:meetPulse 2.8s ease-out infinite}
+@keyframes meetPulse{0%{opacity:.8;transform:scale(.9)}70%,100%{opacity:0;transform:scale(1.25)}}
+.meet-float .fab svg{width:26px;height:26px;color:#fff}
+.meet-float .lbl{background:var(--navy);color:#fff;font-weight:700;font-size:.88rem;padding:.55rem .9rem;border-radius:999px;box-shadow:var(--sh-s);
+  opacity:0;transform:translateX(8px);transition:opacity .25s,transform .25s;pointer-events:none;white-space:nowrap}
+.meet-float:hover .lbl,.meet-float:focus-visible .lbl{opacity:1;transform:none}
+.meet-float:hover .fab{transform:scale(1.07)}
+.mbar .m-meet{background:var(--navy);color:#fff}
+.mbar .m-meet svg{color:var(--orange)}
+.meet-tag{display:inline-flex;align-items:center;gap:7px;background:#FFF3E8;color:var(--orange-ink);font-weight:700;font-size:.82rem;
+  padding:5px 11px;border-radius:999px;margin-bottom:10px}
+.meet-tag svg{width:15px;height:15px}
+.meet-modes{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.mmode{position:relative;display:block;cursor:pointer}
+.mmode input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.mmode span{display:block;border:1.5px solid var(--line);border-radius:14px;padding:12px 14px;transition:border-color .2s,background .2s,box-shadow .2s}
+.mmode b{display:block;font-size:.97rem}
+.mmode small{display:block;color:var(--muted);font-size:.82rem;line-height:1.35;margin-top:2px}
+.mmode input:checked+span{border-color:var(--navy);background:var(--sky);box-shadow:inset 0 0 0 1px var(--navy)}
+.mmode input:focus-visible+span{outline:3px solid var(--orange);outline-offset:2px}
+
 /* ---------- responsive ---------- */
 @media (max-width:1100px){
   .hero-grid{grid-template-columns:1fr;gap:38px}
@@ -461,6 +508,8 @@ img.noimg{visibility:hidden}
   .ftr-grid{grid-template-columns:1fr 1fr}
 }
 @media (max-width:720px){
+  .tst-grid{grid-template-columns:1fr;gap:28px}
+  .tst-media{max-width:460px;width:100%;margin:0 auto}
   .group{grid-template-columns:1fr}
   .group-img{min-height:200px}
   .incl{grid-template-columns:1fr}
@@ -507,7 +556,9 @@ img.noimg{visibility:hidden}
   .steps{grid-template-columns:1fr}
   .steps li::after{display:none}
   .ftr-grid{grid-template-columns:1fr}
-  .wa-float{display:none}
+  .wa-float,.meet-float{display:none}
+  .mbar a,.mbar button{font-size:.74rem;padding:7px 2px}
+  .meet-modes{grid-template-columns:1fr}
   .mbar{display:grid}
   .ov{padding:0;align-items:end}
   .sheet{max-height:94vh;border-radius:22px 22px 0 0}
@@ -544,37 +595,41 @@ img.noimg{visibility:hidden}
   .pass-btns .btn{flex:1}
 }
 /* ---------- travel cursor (desktop mouse only, enabled from JS) ---------- */
+/* state classes live on .cur (not <html>) so hovering never restyles the page,
+   and everything animates with transform/opacity only, which stays on the GPU */
 html.cur-on,html.cur-on *{cursor:none!important}
 html.cur-on input,html.cur-on textarea,html.cur-on select{cursor:auto!important}
-.cur-dot,.cur-plane,.cur-trail{position:fixed;left:0;top:0;pointer-events:none;z-index:9999}
-.cur-dot{width:8px;height:8px;margin:-4px 0 0 -4px;border-radius:50%;background:var(--orange);
-  box-shadow:0 0 0 2px rgba(255,255,255,.85);transition:width .25s,height .25s,margin .25s,background .25s,border-color .25s,opacity .2s;border:2px solid transparent}
-.cur-plane{width:0;height:0}
-.cur-ring{position:absolute;left:0;top:0;width:34px;height:34px;transform:translate(-50%,-50%);border-radius:50%;
-  display:grid;place-items:center;transition:width .35s cubic-bezier(.3,1.5,.5,1),height .35s cubic-bezier(.3,1.5,.5,1),background .3s,opacity .2s}
+.cur{position:fixed;inset:0;pointer-events:none;z-index:9999;transition:opacity .2s}
+.cur.out,.cur.text{opacity:0}
+.cur-dot,.cur-plane,.cur-trail{position:absolute;left:0;top:0;will-change:transform}
+.cur-dot i{position:absolute;left:-19px;top:-19px;width:38px;height:38px;border-radius:50%;background:var(--orange);
+  border:2px solid transparent;box-shadow:0 0 0 9px rgba(255,255,255,.85);transform:scale(.21);
+  transition:transform .3s cubic-bezier(.3,1.4,.5,1),background .25s,border-color .25s,box-shadow .25s,opacity .2s}
+.cur-ring{position:absolute;left:-52px;top:-52px;width:104px;height:104px;border-radius:50%;display:grid;place-items:center;isolation:isolate;transition:opacity .2s}
+.cur-ring::after{content:"";position:absolute;inset:0;border-radius:50%;z-index:-1;background:rgba(12,27,77,.92);
+  box-shadow:0 14px 30px -12px rgba(12,27,77,.7);transform:scale(.3);opacity:0;
+  transition:transform .4s cubic-bezier(.3,1.4,.5,1),opacity .25s}
 .cur-ring::before{content:"";position:absolute;inset:14px;border-radius:50%;border:2px dashed rgba(244,123,32,.65);opacity:0;transition:opacity .3s}
 .cur-orbit{position:absolute;inset:0;display:grid;place-items:center}
-.cur-orbit svg{width:26px;height:26px;color:var(--orange);filter:drop-shadow(0 2px 3px rgba(12,27,77,.55))}
+.cur-orbit svg{width:26px;height:26px;color:var(--orange);filter:drop-shadow(0 2px 3px rgba(12,27,77,.55));will-change:transform}
 .cur-ring em{position:relative;font-style:normal;color:#fff;font-weight:800;font-size:.74rem;letter-spacing:.02em;
   text-align:center;line-height:1.15;max-width:64px;opacity:0;transform:scale(.6);transition:opacity .2s,transform .3s}
-.cur-trail{width:5px;height:5px;margin:-2.5px 0 0 -2.5px;border-radius:50%;background:#7FA6EC;animation:curTrail .8s ease-out forwards}
-@keyframes curTrail{to{opacity:0;transform:scale(.2)}}
+.cur-trail{width:5px;height:5px;margin:-2.5px 0 0 -2.5px;border-radius:50%;background:#7FA6EC;opacity:0}
 @keyframes curOrbit{to{transform:rotate(360deg)}}
 /* over a link or button: the dot opens into a ring */
-html.cur-link .cur-dot{width:38px;height:38px;margin:-19px 0 0 -19px;background:rgba(244,123,32,.12);border-color:var(--orange);box-shadow:none}
-html.cur-link .cur-ring{opacity:.35}
+.cur.link .cur-dot i{transform:scale(1);background:rgba(244,123,32,.12);border-color:var(--orange);box-shadow:none}
+.cur.link .cur-ring{opacity:.35}
 /* on orange buttons the orange cursor would vanish, so it turns navy there */
-html.cur-warm .cur-dot{background:transparent;border-color:var(--navy);box-shadow:0 0 0 2px rgba(255,255,255,.7)}
-html.cur-warm .cur-orbit svg{color:var(--navy);filter:drop-shadow(0 1px 2px rgba(255,255,255,.8))}
-html.cur-pkg.cur-warm .cur-orbit svg{color:var(--orange);filter:drop-shadow(0 2px 3px rgba(12,27,77,.55))}
+.cur.warm .cur-dot i{background:transparent;border-color:var(--navy);box-shadow:0 0 0 2px rgba(255,255,255,.7)}
+.cur.warm .cur-orbit svg{color:var(--navy);filter:drop-shadow(0 1px 2px rgba(255,255,255,.8))}
+.cur.pkg.warm .cur-orbit svg{color:var(--orange);filter:drop-shadow(0 2px 3px rgba(12,27,77,.55))}
 /* over a package: the plane circles a navy "View trip" badge */
-html.cur-pkg .cur-dot{opacity:0}
-html.cur-pkg .cur-ring{width:104px;height:104px;background:rgba(12,27,77,.92);box-shadow:0 14px 30px -12px rgba(12,27,77,.7)}
-html.cur-pkg .cur-ring::before{opacity:1}
-html.cur-pkg .cur-ring em{opacity:1;transform:none}
-html.cur-pkg .cur-orbit{animation:curOrbit 2.6s linear infinite}
-html.cur-pkg .cur-orbit svg{transform:translateY(-38px) rotate(90deg) scale(.75)!important}
-html.cur-text .cur-dot,html.cur-text .cur-ring,html.cur-out .cur-dot,html.cur-out .cur-ring{opacity:0}
+.cur.pkg .cur-dot i{opacity:0}
+.cur.pkg .cur-ring::after{transform:none;opacity:1}
+.cur.pkg .cur-ring::before{opacity:1}
+.cur.pkg .cur-ring em{opacity:1;transform:none}
+.cur.pkg .cur-orbit{animation:curOrbit 2.6s linear infinite}
+.cur.pkg .cur-orbit svg{transform:translateY(-38px) rotate(90deg) scale(.75)!important}
 
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
@@ -588,7 +643,7 @@ html.cur-text .cur-dot,html.cur-text .cur-ring,html.cur-out .cur-dot,html.cur-ou
     <a class="logo" href="#top" aria-label="Triplix Holidays home"><img src="assets/triplix-logo.png" alt="Triplix Holidays, Simplifying Every Trip" width="89" height="64"></a>
     <nav class="nav" aria-label="Main">
       <a href="#packages">Packages</a><a href="#services">Services</a><a href="#destinations">Destinations</a>
-      <a href="#why">Why us</a><a href="#contact">Contact</a>
+      <a href="#reviews">Reviews</a><a href="#contact">Contact</a>
     </nav>
     <div class="hdr-cta">
       <a class="hdr-call" href="tel:+919971798730"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>99717 98730</a>
@@ -601,8 +656,9 @@ html.cur-text .cur-dot,html.cur-text .cur-ring,html.cur-out .cur-dot,html.cur-ou
 </header>
 <nav class="mnav" id="mnav" aria-label="Mobile">
   <a href="#packages">Packages</a><a href="#services">Services</a><a href="#destinations">Destinations</a>
-  <a href="#why">Why us</a><a href="#contact">Contact</a>
-  <button class="btn btn-orange full" data-quote>Get a Free Quote</button>
+  <a href="#reviews">Reviews</a><a href="#why">Why us</a><a href="#contact">Contact</a>
+  <button class="btn btn-navy full" data-meet><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18M8 14h3v3H8z"/></svg>Book a Face-to-Face Meeting</button>
+  <button class="btn btn-orange full" style="margin-top:10px" data-quote>Get a Free Quote</button>
 </nav>
 
 <main id="top">
@@ -618,7 +674,7 @@ html.cur-text .cur-dot,html.cur-text .cur-ring,html.cur-out .cur-dot,html.cur-ou
   </svg>
   <div class="shell hero-grid">
     <div>
-      <span class="where"><i></i>Travel desk in Kanpur, booking across India and abroad</span>
+      <span class="where"><i></i>Your travel desk for every city in India, booking worldwide</span>
       <h1>Simplifying every trip<span class="stop">.</span></h1>
       <p class="lede">Flights, hotels and complete holidays planned around your dates and your budget, by a team you can call or WhatsApp any time.</p>
       <div class="hero-cta">
@@ -628,8 +684,10 @@ html.cur-text .cur-dot,html.cur-text .cur-ring,html.cur-out .cur-dot,html.cur-ou
         <a class="btn btn-ghost-dark btn-lg" data-wa="Hi Triplix Holidays, I'd like help planning a trip." href="#">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.2-1.2l-.3-.2-2.9.9.9-2.8-.2-.3A8 8 0 1 1 12 20Z"/></svg>
           WhatsApp Us</a>
+        <button class="btn btn-meet btn-lg" data-meet><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18M8 14h3v3H8z"/></svg>Book a Face-to-Face Meeting</button>
       </div>
       <div class="hero-meta">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Hotel rates cheaper than online platforms</span>
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Free quotes</span>
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Every trip can be customised</span>
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Support before and during travel</span>
@@ -638,12 +696,12 @@ html.cur-text .cur-dot,html.cur-text .cur-ring,html.cur-out .cur-dot,html.cur-ou
 
     <div class="board" id="board" aria-label="Holiday departures board">
       <div class="board-top">
-        <div class="board-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg><span id="boardTitle">Holidays departing</span></div>
+        <div class="board-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg><span id="boardTitle">Top destinations</span></div>
         <div class="board-clock" id="clock">--:--</div>
       </div>
       <div class="bhead" aria-hidden="true"><span>Destination</span><span class="bh-trip">Trip</span><span>Fare from</span><span class="bh-status">Status</span></div>
       <div id="boardRows"></div>
-      <div class="board-foot"><span>Tap a row to see the trip</span><div class="board-pager" id="pager"><button class="on" aria-label="Packages with fixed fares"></button><button aria-label="More destinations on request"></button></div></div>
+      <div class="board-foot"><span>Tap a row to see the trip</span><div class="board-pager" id="pager"><button class="on" aria-label="Top destinations"></button><button aria-label="More destinations"></button></div></div>
     </div>
   </div>
 </section>
@@ -654,9 +712,10 @@ html.cur-text .cur-dot,html.cur-text .cur-ring,html.cur-out .cur-dot,html.cur-ou
     <div class="cmp">
       <div class="cmp-copy">
         <span class="tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L2 12V2h10l8.6 8.6a2 2 0 0 1 0 2.8z"/><circle cx="7" cy="7" r="1.5"/></svg>Best Price Promise</span>
-        <h2>Don't book before you compare.</h2>
-        <p>Found a hotel, flight or holiday online? Send us the details first. We compare the options available to us and work to give you a competitive price and better value for your money.</p>
+        <h2>Hotel rates cheaper than online platforms.</h2>
+        <p>Found a hotel anywhere in India or abroad on a booking site? Send us the details before you pay. We get you the same hotel cheaper than online platforms, and do the same for flights and holidays.</p>
         <ul class="cmp-points">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Cheaper hotel rates from anywhere, compared with online platforms</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Branded 3, 4 and 5 star hotels in India and worldwide</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Rates from a real travel expert, not a bot</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>No hidden charges in your quotation</li>
@@ -684,7 +743,7 @@ html.cur-text .cur-dot,html.cur-text .cur-ring,html.cur-out .cur-dot,html.cur-ou
         </div>
         <div class="panel" role="tabpanel" id="p-flight" aria-labelledby="t-flight" hidden>
           <div class="fgrid">
-            <div class="fld"><label for="f-from">From</label><input id="f-from" placeholder="e.g. Kanpur / Lucknow"></div>
+            <div class="fld"><label for="f-from">From</label><input id="f-from" placeholder="e.g. Delhi / Mumbai"></div>
             <div class="fld"><label for="f-to">To</label><input id="f-to" placeholder="e.g. Bangkok"></div>
             <div class="fld"><label for="f-date">Departure date</label><input id="f-date" type="date"></div>
             <div class="fld"><label for="f-ret">Return date <small>(optional)</small></label><input id="f-ret" type="date"></div>
@@ -697,7 +756,7 @@ html.cur-text .cur-dot,html.cur-text .cur-ring,html.cur-out .cur-dot,html.cur-ou
             <div class="fld"><label for="v-dest">Destination</label><input id="v-dest" list="destList" placeholder="e.g. Kashmir, Bali"></div>
             <div class="fld"><label for="v-when">When</label><input id="v-when" placeholder="e.g. 15 Dec, or December"></div>
             <div class="fld"><label for="v-pax">Travellers</label><input id="v-pax" placeholder="e.g. 4 adults"></div>
-            <div class="fld"><label for="v-from">Starting from</label><input id="v-from" placeholder="e.g. Kanpur"></div>
+            <div class="fld"><label for="v-from">Starting from</label><input id="v-from" placeholder="e.g. Delhi"></div>
             <div class="fld wide"><label for="v-seen">Package price you found <small>(optional)</small></label><input id="v-seen" inputmode="numeric" placeholder="₹ per person or total"></div>
           </div>
         </div>
@@ -706,8 +765,36 @@ html.cur-text .cur-dot,html.cur-text .cur-ring,html.cur-out .cur-dot,html.cur-ou
           <button class="btn btn-wa btn-lg" id="cmpGo">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.2-1.2l-.3-.2-2.9.9.9-2.8-.2-.3A8 8 0 1 1 12 20Z"/></svg>
             Get today's rate on WhatsApp</button>
-          <span class="cmp-note">Quotes are free. Rates depend on availability on the day.</span>
+          <span class="cmp-note">Send the online price you found. Quotes are free; rates depend on availability on the day.</span>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VIDEO TESTIMONIAL ================= -->
+<section class="sec tst" id="reviews">
+  <div class="shell tst-grid">
+    <div class="tst-media">
+      <!-- Testimonial video: save it as assets/testimonial.mp4 (MP4, H.264). Until then the photo below is shown. -->
+      <video id="tVid" controls playsinline preload="metadata" poster="assets/testimonial-poster.jpg">
+        <source src="assets/testimonial.mp4" type="video/mp4">
+      </video>
+      <img id="tImg" src="assets/testimonial-poster.jpg" alt="Four Triplix travellers holding the Triplix Holidays flag, with Bugs Bunny and Daffy Duck" loading="lazy" hidden>
+      <span class="tst-badge"><i></i>Real Triplix travellers</span>
+    </div>
+    <div class="tst-copy">
+      <span class="tag"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>Traveller stories</span>
+      <h2>Hear it from people who travelled with us</h2>
+      <p>Real customers, real trips. See what travellers say about planning their holiday with Triplix, from the first quote to the flight home.</p>
+      <ul class="cmp-points tst-points">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Every trip planned personally by our team</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Support on phone and WhatsApp before and during travel</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>More traveller photos and videos on our Instagram</li>
+      </ul>
+      <div class="hero-cta">
+        <button class="btn btn-orange" data-quote>Plan My Trip</button>
+        <a class="btn btn-ghost" href="https://www.instagram.com/triplixholidays/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>More on Instagram</a>
       </div>
     </div>
   </div>
@@ -795,13 +882,13 @@ html.cur-text .cur-dot,html.cur-text .cur-ring,html.cur-out .cur-dot,html.cur-ou
       </div>
       <div class="dtabs" role="tablist" aria-label="Choose destinations">
         <span class="dtabs-ind" aria-hidden="true"></span>
-        <button role="tab" id="dt-india" aria-selected="true" aria-controls="bento" data-d="india">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>Explore India</button>
-        <button role="tab" id="dt-world" aria-selected="false" aria-controls="bento" data-d="world" tabindex="-1">
+        <button role="tab" id="dt-world" aria-selected="true" aria-controls="bento" data-d="world">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>Explore the world</button>
+        <button role="tab" id="dt-india" aria-selected="false" aria-controls="bento" data-d="india" tabindex="-1">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>Explore India</button>
       </div>
     </div>
-    <div class="bento" id="bento" role="tabpanel" aria-labelledby="dt-india"></div>
+    <div class="bento" id="bento" role="tabpanel" aria-labelledby="dt-world"></div>
     <p class="swipe-hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Swipe to see more</p>
     <div class="more-places"><span>We also plan</span><div id="morePlaces" style="display:contents"></div></div>
   </div>
@@ -861,7 +948,7 @@ html.cur-text .cur-dot,html.cur-text .cur-ring,html.cur-out .cur-dot,html.cur-ou
 <section class="sec" id="contact" style="padding-top:20px">
   <div class="shell">
     <div class="sec-head"><h2>Talk to a travel expert</h2>
-      <p>Call, WhatsApp or visit us in Kanpur. Send your travel dates and requirements for a personalised quotation.</p></div>
+      <p>Wherever you are in India, call, WhatsApp or book a face-to-face meeting. Send your travel dates and requirements for a personalised quotation.</p></div>
     <div class="contact-grid">
       <div class="cbox">
         <a class="crow" href="tel:+919971798730"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span><span><small>Call</small><b>+91 99717 98730</b></span></a>
@@ -869,7 +956,8 @@ html.cur-text .cur-dot,html.cur-text .cur-ring,html.cur-out .cur-dot,html.cur-ou
         <a class="crow" href="mailto:triplixholidays@gmail.com"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></span><span><small>Email</small><b>triplixholidays@gmail.com</b></span></a>
         <a class="crow" href="https://www.instagram.com/triplixholidays/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span><span><small>Instagram</small><b>@triplixholidays</b></span></a>
         <a class="crow" href="https://www.google.com/maps/search/?api=1&amp;query=SRGP+Complex+Tatmil+Chauraha+Kanpur" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span><small>Office</small><b>87, 88 Upper Ground Floor, SRGP Complex, Tatmil Chauraha, Kanpur</b></span></a>
-        <button class="btn btn-orange full" style="margin-top:18px" data-quote>Get a Free Quote</button>
+        <button class="btn btn-navy full" style="margin-top:18px" data-meet><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18M8 14h3v3H8z"/></svg>Book a Face-to-Face Meeting</button>
+        <button class="btn btn-orange full" style="margin-top:10px" data-quote>Get a Free Quote</button>
       </div>
       <div class="map"><iframe title="Map showing Tatmil Chauraha, Kanpur" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
         src="https://maps.google.com/maps?q=Tatmil%20Chauraha%2C%20Kanpur&amp;z=15&amp;output=embed"></iframe></div>
@@ -896,7 +984,7 @@ html.cur-text .cur-dot,html.cur-text .cur-ring,html.cur-out .cur-dot,html.cur-ou
         <p>Flights, hotels, honeymoon, pilgrim and custom holiday packages across India and around the world.</p>
       </div>
       <div class="ftr-links"><h4>Explore</h4>
-        <a href="#packages">Holiday packages</a><a href="#vietnam">Vietnam package</a><a href="#services">Services</a>
+        <a href="#packages">Holiday packages</a><a href="#reviews">Traveller reviews</a><a href="#vietnam">Vietnam package</a><a href="#services">Services</a>
         <a href="#destinations">Destinations</a><a href="#compare">Best Price Promise</a></div>
       <div class="ftr-links"><h4>Contact</h4>
         <a href="tel:+919971798730">+91 99717 98730</a><a href="mailto:triplixholidays@gmail.com">triplixholidays@gmail.com</a>
@@ -910,6 +998,10 @@ html.cur-text .cur-dot,html.cur-text .cur-ring,html.cur-out .cur-dot,html.cur-ou
   </div>
 </footer>
 
+<button class="meet-float" data-meet aria-label="Book a face-to-face meeting with a travel expert">
+  <span class="fab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18M8 14h3v3H8z"/></svg></span><span class="lbl">Book a face-to-face meeting</span>
+</button>
+
 <a class="wa-float" href="#" data-wa="Hi Triplix Holidays, I'd like to talk to a travel expert." aria-label="Talk to a travel expert on WhatsApp">
   <span class="lbl">Talk to a travel expert</span>
   <span class="fab"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.2-1.2l-.3-.2-2.9.9.9-2.8-.2-.3A8 8 0 1 1 12 20Z"/><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.6.2s-.7.9-.9 1.1c-.2.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.4.1-.6l.5-.5c.1-.2.2-.3.3-.5s0-.4 0-.5-.6-1.5-.8-2-.5-.5-.6-.5h-.6c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3 2 3.1 5 4.3c.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.6.2-1.2.2-1.3l-.5-.2Z"/></svg></span>
@@ -918,7 +1010,8 @@ html.cur-text .cur-dot,html.cur-text .cur-ring,html.cur-out .cur-dot,html.cur-ou
 <div class="mbar" role="navigation" aria-label="Quick contact">
   <a class="m-call" href="tel:+919971798730"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
   <a class="m-wa" href="#" data-wa="Hi Triplix Holidays, I'd like help planning a trip."><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.2-1.2l-.3-.2-2.9.9.9-2.8-.2-.3A8 8 0 1 1 12 20Z"/></svg>WhatsApp</a>
-  <button class="m-quote" data-quote><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg>Get a Free Quote</button>
+  <button class="m-meet" data-meet><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18M8 14h3v3H8z"/></svg>Meet us</button>
+  <button class="m-quote" data-quote><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg>Free Quote</button>
 </div>
 
 <!-- package modal -->
@@ -939,12 +1032,42 @@ html.cur-text .cur-dot,html.cur-text .cur-ring,html.cur-out .cur-dot,html.cur-ou
         <div class="fld"><label for="q-adults">Adults</label><select id="q-adults"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10+</option></select></div>
         <div class="fld"><label for="q-kids">Children</label><select id="q-kids"><option selected>0</option><option>1</option><option>2</option><option>3</option><option>4+</option></select></div>
         <div class="fld"><label for="q-type">Trip type</label><select id="q-type"><option>Holiday</option><option>Honeymoon</option><option>Pilgrimage</option><option>Family trip</option><option>Group trip</option><option>Flights only</option><option>Hotel only</option><option>Visa help</option></select></div>
-        <div class="fld"><label for="q-from">Starting from</label><input id="q-from" placeholder="e.g. Kanpur"></div>
+        <div class="fld"><label for="q-from">Starting from</label><input id="q-from" placeholder="e.g. Bengaluru"></div>
         <div class="fld wide"><label for="q-note">Anything else? <small>(optional)</small></label><textarea id="q-note" placeholder="Budget, hotel category, places you want to include..."></textarea></div>
       </div>
       <button class="btn btn-wa btn-lg full" id="qGo" style="margin-top:16px">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.2-1.2l-.3-.2-2.9.9.9-2.8-.2-.3A8 8 0 1 1 12 20Z"/></svg>
         Send on WhatsApp</button>
+    </div>
+  </div>
+</div>
+
+<!-- face-to-face meeting modal -->
+<div class="ov" id="meetOv" role="dialog" aria-modal="true" aria-labelledby="meetTitle">
+  <div class="sheet sheet-sm">
+    <button class="close-btn" data-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <div class="qhead">
+      <span class="meet-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18M8 14h3v3H8z"/></svg>Free, no obligation</span>
+      <h2 id="meetTitle" style="font-size:1.7rem">Plan your holiday face to face</h2>
+      <p>Sit down with a Triplix travel expert, in person or on a video call from any city. We'll go through destinations, hotels and prices together.</p>
+    </div>
+    <div class="qbody">
+      <div class="meet-modes" role="radiogroup" aria-label="How would you like to meet?">
+        <label class="mmode"><input type="radio" name="m-mode" value="Video call" checked><span><b>Video call</b><small>Face to face from anywhere in India</small></span></label>
+        <label class="mmode"><input type="radio" name="m-mode" value="In person at the office"><span><b>In person</b><small>Meet us at our office</small></span></label>
+      </div>
+      <div class="fgrid">
+        <div class="fld"><label for="m-name">Your name</label><input id="m-name" autocomplete="name"><p class="hint" id="m-name-h">Please enter your name.</p></div>
+        <div class="fld"><label for="m-phone">Phone or WhatsApp</label><input id="m-phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="10-digit mobile"><p class="hint" id="m-phone-h">Please enter a 10-digit mobile number.</p></div>
+        <div class="fld"><label for="m-date">Preferred date</label><input id="m-date" type="date"><p class="hint" id="m-date-h">Please pick a date.</p></div>
+        <div class="fld"><label for="m-slot">Preferred time</label><select id="m-slot"><option>10 am to 12 noon</option><option selected>12 noon to 3 pm</option><option>3 pm to 6 pm</option><option>6 pm to 8 pm</option></select></div>
+        <div class="fld"><label for="m-city">Your city</label><input id="m-city" autocomplete="address-level2" placeholder="e.g. Pune"></div>
+        <div class="fld"><label for="m-dest">Holiday you're planning</label><input id="m-dest" list="destList" placeholder="e.g. Mauritius"></div>
+      </div>
+      <button class="btn btn-wa btn-lg full" id="meetGo" style="margin-top:16px">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.2-1.2l-.3-.2-2.9.9.9-2.8-.2-.3A8 8 0 1 1 12 20Z"/></svg>
+        Request meeting on WhatsApp</button>
+      <p class="cmp-note" style="margin-top:10px;text-align:center">We'll confirm the time with you on WhatsApp.</p>
     </div>
   </div>
 </div>
@@ -968,6 +1091,15 @@ var CFG={brand:'Triplix Holidays', wa:'919971798730',
 /* Packages. Prices are per person. `was` shows a struck-out original price.
    price:null shows "On request". Photos live in /assets. */
 var PACKAGES=[
+ {id:'mauritius',region:'world',title:'Mauritius honeymoon package',from:'North Mauritius',to:'South Mauritius',dur:'3N / 4D',stay:'4★ pool-side room',meals:'Breakfast and dinner',
+  price:45999,was:null,fareNote:'Just, per person',badge:'Honeymoon special',hot:true,
+  gallery:['mu-lemorne','mu-beach','mu-resort','mu-falls','mauritius-flyer'],
+  board:{dest:'MAURITIUS',status:'HOT DEAL',st:'board'},
+  sub:'3 nights, 4 days for couples: a pool-side room, a speed boat island tour and sightseeing across North and South Mauritius.',
+  highlights:['4-star hotel with a pool-side room','Daily breakfast and dinner','Sightseeing of North and South Mauritius','Speed boat island tour','23 Coloured Earth Nature Park visit','Airport transfers both ways','Port Louis','Ile aux Cerfs (optional)'],
+  days:null,
+  excl:['Airfare','Visa fees, if applicable','Travel insurance','Meals other than those mentioned','Tips, personal expenses and optional activities'],
+  notes:['Your day-wise plan is shared with the quotation.','The Ile aux Cerfs island trip is optional.']},
  {id:'vietnam',region:'world',title:'Vietnam, Hanoi to Danang',from:'Hanoi',to:'Danang',dur:'4N / 5D',stay:'3★ hotels',meals:'Daily breakfast',
   price:27999,was:null,fareNote:'Starting at, per person',badge:'Featured',hot:true,
   gallery:['halong','vn-coconut','vn-temple','vn-cave','vn-basket'],
@@ -1043,11 +1175,15 @@ var PACKAGES=[
   excl:['Airfare','Visa fees','Meals other than breakfast','Personal expenses'],
   notes:['Submit the SG Arrival Card online before you land.','Hotel check-in is 3 pm and check-out is 12 noon.','The shared city tour ends at Little India.']}
 ];
-/* Shown on page 2 of the departure board. */
-var ON_REQUEST=['BALI','DUBAI','MALDIVES','SRI LANKA','MALAYSIA','EUROPE'];
+/* Departure board pages. A lowercase entry is a package id (shows its fare and opens it);
+   an UPPERCASE entry is a destination without a fixed fare (shows QUOTE and opens the quote form). */
+var BOARD=[
+ {title:'Top destinations',rows:['DUBAI','mauritius','thailand','BALI','vietnam','SRI LANKA']},
+ {title:'More destinations',rows:['kashmir','nepal','singapore','MALDIVES','MALAYSIA','EUROPE']}
+];
 
 var INDIA=['Kashmir','Himachal Pradesh','Uttarakhand','Rajasthan','Kerala','Goa','Andaman','Northeast India','Gujarat','Maharashtra'];
-var WORLD=['Vietnam','Thailand','Bali','Sri Lanka','Dubai','Singapore','Malaysia','Maldives','Europe'];
+var WORLD=['Dubai','Mauritius','Thailand','Bali','Vietnam','Sri Lanka','Singapore','Malaysia','Maldives','Europe'];
 
 var SERVICES=[
  ['Flight booking','Domestic and international flights from leading airlines, with suitable fares and convenient options for your route.','Flights only','<path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>'],
@@ -1095,7 +1231,12 @@ var PHOTOS={
  'maldives':   {web:'https://images.unsplash.com/photo-1514282401047-d79a71a590e8'},
  'bali':       {web:'https://images.unsplash.com/photo-1537996194471-e657df975ab4'},
  'bali-rice':  {web:'https://images.unsplash.com/photo-1555400038-63f5ba517a47',local:'gd-town'},
- 'dubai':      {web:'https://images.unsplash.com/photo-1512453979798-5ea266f8880c'}
+ 'dubai':      {web:'https://images.unsplash.com/photo-1512453979798-5ea266f8880c'},
+ 'mu-lemorne': {web:'https://images.unsplash.com/photo-1513415277900-a62401e19be4',local:'mu-hero'},
+ 'mu-beach':   {web:'https://images.unsplash.com/photo-1605985687800-b280f966c1c1',local:'mu-north'},
+ 'mu-resort':  {web:'https://images.unsplash.com/photo-1582574643306-d00ea3f7d49b',local:'mu-pool'},
+ 'mu-falls':   {web:'https://images.unsplash.com/photo-1586853211885-d69f5be5ce9f',local:'mu-south'},
+ 'srilanka':   {web:'https://images.unsplash.com/photo-1566296314736-6eaac1ca0cb9'}
 };
 /* PHOTOS:END */
 function photoURL(key,w){
@@ -1149,7 +1290,7 @@ burger.addEventListener('click',function(){var o=mnav.classList.toggle('open');b
 $$('#mnav a').forEach(function(a){a.addEventListener('click',function(){mnav.classList.remove('open');burger.setAttribute('aria-expanded','false')})});
 
 /* ---------- datalist ---------- */
-$('#destList').innerHTML=INDIA.concat(WORLD,['Nepal','Gangtok and Darjeeling','Hong Kong']).map(function(x){return '<option value="'+esc(x)+'">'}).join('');
+$('#destList').innerHTML=WORLD.concat(INDIA,['Nepal','Gangtok and Darjeeling','Hong Kong']).map(function(x){return '<option value="'+esc(x)+'">'}).join('');
 
 /* ---------- departure board ---------- */
 var COLS=[['g-dest',10],['g-trip',5],['g-fare',7],['g-status',8]];
@@ -1184,16 +1325,19 @@ function setGroup(row,cls,text,base){
 }
 var DOTS={board:'#FF9A47',ok:'#6EE7A8',group:'#9CC2FF',ask:'#E6ECFF'};
 function boardData(page){
-  if(page===0)return PACKAGES.map(function(p){return {dest:p.board.dest,trip:p.dur.replace(/\s/g,''),
-    fare:p.price?inr(p.price):'QUOTE',status:p.board.status,st:p.board.st,id:p.id,
-    label:p.title+', '+p.dur.replace('/','to')+(p.price?', from '+inr(p.price)+' per person':', price on request')+'. View details.'}});
-  return ON_REQUEST.map(function(n){return {dest:n,trip:'',fare:'QUOTE',status:'ENQUIRE',st:'ask',dest_q:n,
-    label:n.charAt(0)+n.slice(1).toLowerCase()+', price on request. Ask for a quote.'}});
+  return BOARD[page].rows.map(function(k){
+    var p=pkg(k);
+    if(p)return {dest:p.board.dest,trip:p.dur.replace(/\s/g,''),
+      fare:p.price?inr(p.price):'QUOTE',status:p.board.status,st:p.board.st,id:p.id,
+      label:p.title+', '+p.dur.replace('/','to')+(p.price?', from '+inr(p.price)+' per person':', price on request')+'. View details.'};
+    var n=k.toLowerCase().replace(/\b\w/g,function(c){return c.toUpperCase()});
+    return {dest:k,trip:'',fare:'QUOTE',status:'ENQUIRE',st:'ask',dest_q:n,label:n+', price on request. Ask for a quote.'};
+  });
 }
 var page=0;
 function paint(p){
   page=p;var data=boardData(p);
-  $('#boardTitle').textContent=p===0?'Holidays departing':'More destinations';
+  $('#boardTitle').textContent=BOARD[p].title;
   $$('#pager button').forEach(function(b,i){b.classList.toggle('on',i===p)});
   rowEls.forEach(function(row,i){
     var r=data[i]||{dest:'',trip:'',fare:'',status:'',st:'ask'};var base=i*90;
@@ -1207,7 +1351,7 @@ function paint(p){
 paint(0);
 rowsEl.addEventListener('click',function(e){var row=e.target.closest('.brow');if(!row)return;
   if(row.dataset.id)openPkg(row.dataset.id);
-  else if(row.dataset.q)openQuote({dest:row.dataset.q.charAt(0)+row.dataset.q.slice(1).toLowerCase()})});
+  else if(row.dataset.q)openQuote({dest:row.dataset.q})});
 $$('#pager button').forEach(function(b,i){b.addEventListener('click',function(){paint(i);restart()})});
 /* the board pages between fixed-fare packages and on-request destinations,
    but only while it's on screen and the visitor isn't interacting with it */
@@ -1250,6 +1394,14 @@ $('#cmpGo').addEventListener('click',function(){
   openWA(m);toast('Opening WhatsApp');
 });
 
+/* ---------- video testimonial: fall back to the photo until the video file is added ---------- */
+(function(){
+  var v=$('#tVid'),src=$('#tVid source'),img=$('#tImg');
+  function noVideo(){v.hidden=true;v.removeAttribute('controls');img.hidden=false}
+  src.addEventListener('error',noVideo);v.addEventListener('error',noVideo);
+  if(v.networkState===3)noVideo();   /* NETWORK_NO_SOURCE */
+})();
+
 /* ---------- boarding-pass cards ---------- */
 function passHTML(p){
   var fare=p.price?'<b>'+inr(p.price)+'</b>':'<b style="font-size:1.15rem">On request</b>';
@@ -1291,13 +1443,13 @@ var DEST={
    {name:'Northeast India',line:'Darjeeling, Gangtok and the Himalaya',best:'Mar\u2013May, Oct\u2013Dec',ph:'darjeeling',pkg:'darjeeling'}],
   more:['Himachal Pradesh','Uttarakhand','Goa','Andaman','Gujarat','Maharashtra']},
  world:{tiles:[
-   {name:'Maldives',line:'Overwater villas and coral lagoons',best:'Nov\u2013Apr',ph:'maldives'},
+   {name:'Dubai',line:'Skyline, desert safari and shopping',best:'Nov\u2013Mar',ph:'dubai'},
+   {name:'Mauritius',line:'Honeymoon beaches, lagoons and island tours',best:'May\u2013Dec',ph:'mu-lemorne',pkg:'mauritius'},
    {name:'Thailand',line:'Islands, temples and nightlife',best:'Nov\u2013Mar',ph:'th-phiphi',pkg:'thailand'},
    {name:'Bali',line:'Temples, rice terraces and beach clubs',best:'Apr\u2013Oct',ph:'bali'},
-   {name:'Dubai',line:'Skyline, desert safari and shopping',best:'Nov\u2013Mar',ph:'dubai'},
    {name:'Vietnam',line:'Halong Bay to Danang',best:'Feb\u2013Apr',ph:'halong',pkg:'vietnam'},
-   {name:'Singapore',line:'Gardens, theme parks and the city',best:'All year',ph:'sg-gardens',pkg:'singapore'}],
-  more:['Sri Lanka','Malaysia','Europe']}
+   {name:'Sri Lanka',line:'Tea hills, wildlife and the Ella train',best:'Dec\u2013Mar',ph:'srilanka'}],
+  more:['Singapore','Maldives','Malaysia','Europe']}
 };
 var SIZE=['big','wide','','','wide','wide'];
 var ICAL='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>';
@@ -1376,7 +1528,29 @@ d.addEventListener('click',function(e){
   var o=e.target.closest('[data-open]');if(o){openPkg(o.dataset.open);return}
   var b=e.target.closest('[data-book]');if(b){openWA(bookMsg(pkg(b.dataset.book)));toast('Opening WhatsApp');return}
   var c=e.target.closest('[data-customise]');if(c){var p=pkg(c.dataset.customise);hideOv();setTimeout(function(){openQuote({dest:p.title.split(',')[0],type:'Holiday',note:'Based on the '+p.title+' package. I\'d like to change: '})},80);return}
-  var q=e.target.closest('[data-quote]');if(q){openQuote({dest:q.dataset.dest,type:q.dataset.type});mnav.classList.remove('open')}
+  var q=e.target.closest('[data-quote]');if(q){openQuote({dest:q.dataset.dest,type:q.dataset.type});mnav.classList.remove('open');return}
+  var mt=e.target.closest('[data-meet]');if(mt){openMeet();mnav.classList.remove('open')}
+});
+
+/* ---------- face-to-face meeting ---------- */
+function openMeet(){
+  var t=new Date(),iso=t.getFullYear()+'-'+('0'+(t.getMonth()+1)).slice(-2)+'-'+('0'+t.getDate()).slice(-2);
+  $('#m-date').min=iso;
+  /* carry over details already typed in the quote form */
+  if(!val('m-name')&&val('q-name'))$('#m-name').value=val('q-name');
+  if(!val('m-phone')&&val('q-phone'))$('#m-phone').value=val('q-phone');
+  showOv($('#meetOv'),'#m-name');
+}
+$('#meetGo').addEventListener('click',function(){
+  var name=val('m-name'),phone=val('m-phone').replace(/\D/g,'').slice(-10),date=val('m-date');
+  var bad={name:!name,phone:phone.length!==10,date:!date};
+  ['name','phone','date'].forEach(function(k){$('#m-'+k+'-h').classList.toggle('show',bad[k]);$('#m-'+k).setAttribute('aria-invalid',bad[k])});
+  var first=['name','phone','date'].filter(function(k){return bad[k]})[0];
+  if(first){$('#m-'+first).focus();return}
+  var mode=$('input[name="m-mode"]:checked').value;
+  var m='Hi Triplix Holidays, I\'d like to book a face-to-face meeting to plan a holiday.\n'+line('Meeting',mode)+line('Name',name)+line('Phone',phone)+
+    line('Preferred date',day('m-date'))+line('Preferred time',val('m-slot'))+line('City',val('m-city'))+line('Holiday',val('m-dest'));
+  openWA(m);toast('Opening WhatsApp');hideOv();
 });
 
 function openQuote(o){
@@ -1403,57 +1577,63 @@ $('#qGo').addEventListener('click',function(){
 });
 $$('img').forEach(function(img){if(img.complete&&img.naturalWidth===0&&img.getAttribute('src'))rescue(img)});
 
-/* travel cursor: a plane chases the pointer leaving a contrail, and circles a badge over packages */
+/* travel cursor: a plane chases the pointer leaving a contrail, and circles a badge over packages.
+   Motion is frame-rate independent, the loop sleeps when the plane has caught up,
+   and the contrail reuses a small pool of dots instead of creating new elements. */
 (function(){
   if(reduce||!window.matchMedia('(hover:hover) and (pointer:fine)').matches)return;
   var root=document.documentElement,body=document.body;
-  var dot=document.createElement('div');dot.className='cur-dot';
-  var plane=document.createElement('div');plane.className='cur-plane';
-  plane.innerHTML='<span class="cur-ring"><span class="cur-orbit"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/></svg></span><em></em></span>';
-  dot.setAttribute('aria-hidden','true');plane.setAttribute('aria-hidden','true');
-  body.appendChild(plane);body.appendChild(dot);
-  var svg=plane.querySelector('svg'),label=plane.querySelector('em');
-  var mx=-100,my=-100,px=-100,py=-100,ang=0,lastTx=0,lastTy=0,started=false;
-  var PKG='.pass,.tile,#vietnam .mosaic',LINK='a,button,[role="button"],label,.chip';
-  function mode(m){root.classList.remove('cur-link','cur-pkg','cur-text');if(m)root.classList.add('cur-'+m)}
-  var WARM='.btn-orange,.pass-badge.hot';
+  var cur=document.createElement('div');cur.className='cur out';cur.setAttribute('aria-hidden','true');
+  cur.innerHTML='<div class="cur-plane"><span class="cur-ring"><span class="cur-orbit"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/></svg></span><em></em></span></div><div class="cur-dot"><i></i></div>';
+  var TRAILS=[];for(var i=0;i<16;i++){var t=document.createElement('span');t.className='cur-trail';cur.appendChild(t);TRAILS.push(t)}
+  body.appendChild(cur);
+  var plane=cur.querySelector('.cur-plane'),dot=cur.querySelector('.cur-dot'),svg=cur.querySelector('svg'),label=cur.querySelector('em');
+  var mx=-100,my=-100,px=-100,py=-100,ang=0,lastTx=0,lastTy=0,trailI=0,started=false,running=false,prev=0,curMode='',curWarm=false;
+  var PKG='.pass,.tile,#vietnam .mosaic',LINK='a,button,[role="button"],label,.chip,summary',WARM='.btn-orange,.pass-badge.hot';
+  var canAnimate=typeof cur.animate==='function';
+  function mode(m){if(m===curMode)return;if(curMode)cur.classList.remove(curMode);if(m)cur.classList.add(m);curMode=m}
+  function setLabel(t){if(label.textContent!==t)label.textContent=t}
+  function wake(){if(!running){running=true;prev=0;requestAnimationFrame(tick)}}
   document.addEventListener('mousemove',function(e){
     mx=e.clientX;my=e.clientY;
-    if(!started){started=true;px=mx;py=my;lastTx=mx;lastTy=my;root.classList.add('cur-on');requestAnimationFrame(tick)}
-    root.classList.remove('cur-out');
+    dot.style.transform='translate3d('+mx+'px,'+my+'px,0)';
+    if(!started){started=true;px=mx;py=my;lastTx=mx;lastTy=my;root.classList.add('cur-on')}
+    cur.classList.remove('out');wake();
   },{passive:true});
   document.addEventListener('mouseover',function(e){
-    var t=e.target;
-    root.classList.toggle('cur-warm',!!t.closest(WARM));
+    var t=e.target;if(!t.closest)return;
+    var w=!!t.closest(WARM);if(w!==curWarm){cur.classList.toggle('warm',w);curWarm=w}
     if(t.closest('input,textarea,select,[contenteditable="true"]'))return mode('text');
     var p=t.closest(PKG);
     if(p){
       var b=t.closest('button,a');
-      label.textContent=b&&p.contains(b)&&b!==p?b.textContent.trim():p.classList.contains('tile')?'Explore':p.classList.contains('mosaic')?'Vietnam':'View trip';
+      setLabel(b&&p.contains(b)&&b!==p?b.textContent.trim():p.classList.contains('tile')?'Explore':p.classList.contains('mosaic')?'Vietnam':'View trip');
       return mode('pkg');
     }
     mode(t.closest(LINK)?'link':'');
-  });
-  document.addEventListener('mouseleave',function(){root.classList.add('cur-out')});
-  function tick(){
+  },{passive:true});
+  document.addEventListener('mouseout',function(e){if(!e.relatedTarget)cur.classList.add('out')});
+  function puff(x,y){
+    var s=TRAILS[trailI++%TRAILS.length];
+    if(canAnimate){s.animate([{transform:'translate3d('+x+'px,'+y+'px,0) scale(1)',opacity:.9},{transform:'translate3d('+x+'px,'+y+'px,0) scale(.2)',opacity:0}],{duration:800,easing:'ease-out'})}
+  }
+  function tick(now){
+    var dt=prev?Math.min(now-prev,64):16.7;prev=now;
+    var k=1-Math.pow(.78,dt/16.7);            /* same glide at 60, 120 or 144 Hz */
     var dx=mx-px,dy=my-py;
-    px+=dx*.2;py+=dy*.2;
+    px+=dx*k;py+=dy*k;
     if(dx*dx+dy*dy>9){
-      // turn the nose toward the pointer by the shortest way round
+      /* turn the nose toward the pointer by the shortest way round */
       var target=Math.atan2(dy,dx)*180/Math.PI+90,diff=((target-ang)%360+540)%360-180;
-      ang+=diff*.18;
+      ang+=diff*(1-Math.pow(.8,dt/16.7));
+      svg.style.transform='rotate('+ang.toFixed(2)+'deg)';
     }
-    dot.style.transform='translate3d('+mx+'px,'+my+'px,0)';
-    plane.style.transform='translate3d('+px+'px,'+py+'px,0)';
-    svg.style.transform='rotate('+ang+'deg)';
+    plane.style.transform='translate3d('+px.toFixed(2)+'px,'+py.toFixed(2)+'px,0)';
     var tx=px-lastTx,ty=py-lastTy;
-    if(tx*tx+ty*ty>196&&!root.classList.contains('cur-pkg')){
-      lastTx=px;lastTy=py;
-      var s=document.createElement('span');s.className='cur-trail';s.setAttribute('aria-hidden','true');
-      s.style.left=px+'px';s.style.top=py+'px';
-      s.addEventListener('animationend',function(){s.remove()});
-      body.appendChild(s);
-    }else if(root.classList.contains('cur-pkg')){lastTx=px;lastTy=py}
+    if(curMode==='pkg'){lastTx=px;lastTy=py}
+    else if(tx*tx+ty*ty>196){lastTx=px;lastTy=py;puff(px,py)}
+    /* sleep once the plane has caught up; the next mousemove wakes it */
+    if(dx*dx+dy*dy<.04){px=mx;py=my;plane.style.transform='translate3d('+px+'px,'+py+'px,0)';running=false;return}
     requestAnimationFrame(tick);
   }
 })();

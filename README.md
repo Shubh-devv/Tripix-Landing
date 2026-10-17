@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Triplix Holidays — landing page
 
 Upload this whole folder to Netlify (drag and drop) or any static host. No build step.
@@ -23,3 +24,6 @@ Everything editable is near the top of the <script> in index.html:
 - ON_REQUEST, SERVICES, WHY, INCL, EXCL, TERMS — the other lists on the page
 
 Logo: assets/triplix-logo.png (the client's original file, trimmed).
+=======
+# Tripix-Landing
+>>>>>>> 824f678f806a23a9d1f17977c5555890687e3126
