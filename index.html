@@ -437,23 +437,72 @@ img.noimg{visibility:hidden}
 #toast.on{transform:translate(-50%,0);opacity:1;visibility:visible}
 
 /* ---------- video testimonial ---------- */
-.tst{padding-bottom:20px}
-.tst-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px;align-items:center}
-.tst-media{position:relative;border-radius:22px;overflow:hidden;background:var(--board);aspect-ratio:4/5;max-height:620px;
-  box-shadow:0 40px 80px -40px rgba(12,27,77,.7);isolation:isolate}
-/* a blurred copy of the poster fills any letterbox space around the video */
-.tst-media::before{content:"";position:absolute;inset:-30px;z-index:-1;background:url(assets/testimonial-poster.jpg) center/cover;filter:blur(28px) brightness(.55)}
-.tst-media video,.tst-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
-.tst-media img{object-fit:cover}
-.tst-badge{position:absolute;top:14px;left:14px;display:inline-flex;align-items:center;gap:8px;background:rgba(8,16,44,.7);backdrop-filter:blur(6px);
-  color:#fff;font-size:.8rem;font-weight:700;padding:6px 12px;border-radius:999px;pointer-events:none}
-.tst-badge i{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 3px rgba(63,208,138,.25)}
-.tst-copy .tag{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:#fff;border-radius:999px;
-  padding:6px 13px;font-size:.84rem;font-weight:700;margin-bottom:16px}
-.tst-copy .tag svg{width:15px;height:15px;color:var(--orange)}
-.tst-copy>p{color:var(--ink-2);margin-top:12px;max-width:34rem}
-.tst-points li{color:var(--ink)}
-.tst-points svg{color:var(--blue)}
+.tst{background:var(--navy);color:#fff;position:relative;overflow:hidden;margin-top:70px}
+.tst::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse 45% 60% at 70% 45%,rgba(244,123,32,.2),transparent 65%),
+             radial-gradient(ellipse 50% 60% at 0% 0%,rgba(31,111,234,.35),transparent 60%),
+             radial-gradient(circle,rgba(255,255,255,.06) 1px,transparent 1.4px) 0 0/22px 22px}
+.tst::after{content:"\201C";position:absolute;right:-10px;top:-90px;font-size:28rem;line-height:1;font-weight:900;color:rgba(255,255,255,.04);pointer-events:none}
+.tst .shell{position:relative;z-index:1}
+.tst-head{max-width:46rem;margin-bottom:36px}
+.tst-head h2 span{color:var(--orange);display:block}
+.tst-head p{color:#C9D5F2;margin-top:12px;font-size:1.06rem}
+.tst-eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);
+  border-radius:999px;padding:6px 14px;font-size:.84rem;font-weight:700;color:#E3EAFB;margin-bottom:16px}
+.tst-eyebrow i{width:8px;height:8px;border-radius:50%;background:#FF4D4D;box-shadow:0 0 0 0 rgba(255,77,77,.6);animation:recDot 1.6s infinite}
+@keyframes recDot{0%{box-shadow:0 0 0 0 rgba(255,77,77,.6)}80%,100%{box-shadow:0 0 0 9px rgba(255,77,77,0)}}
+.tst-grid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,.8fr);gap:38px;align-items:center}
+
+/* the "screen" */
+.tv{position:relative;aspect-ratio:16/9;border-radius:24px;overflow:hidden;background:#000;isolation:isolate;
+  box-shadow:0 0 0 1px rgba(255,255,255,.14),0 50px 100px -40px rgba(0,0,0,.95),0 0 90px -25px rgba(244,123,32,.45);
+  transform:perspective(1400px) rotateY(-4deg) rotateX(1.5deg);transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+.tv:hover,.tv.playing{transform:none}
+.tv video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#000}
+.tv.playing video{object-fit:contain}
+.tv::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;transition:opacity .4s;
+  background:radial-gradient(ellipse 70% 70% at 50% 50%,rgba(8,16,44,.05),rgba(8,16,44,.55) 100%),
+             linear-gradient(180deg,rgba(8,16,44,.15),rgba(8,16,44,0) 30%,rgba(8,16,44,.65))}
+.tv-live,.tv-mute{position:absolute;z-index:2;display:inline-flex;align-items:center;gap:7px;background:rgba(8,16,44,.62);backdrop-filter:blur(8px);
+  color:#fff;font-size:.8rem;font-weight:700;padding:6px 12px;border-radius:999px;pointer-events:none;transition:opacity .3s}
+.tv-live{top:16px;left:16px}
+.tv-live i{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 3px rgba(63,208,138,.25)}
+.tv-mute{bottom:16px;right:16px;font-weight:600;color:#C9D5F2}
+.tv-mute svg{width:15px;height:15px}
+.tv-play{position:absolute;inset:0;z-index:2;border:0;background:transparent;color:#fff;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:14px;transition:opacity .35s}
+.tv-btn{position:relative;width:96px;height:96px;border-radius:50%;background:var(--orange);color:var(--navy);display:grid;place-items:center;
+  box-shadow:0 20px 40px -12px rgba(244,123,32,.8);transition:transform .3s cubic-bezier(.3,1.5,.5,1)}
+.tv-btn svg{width:38px;height:38px;margin-left:5px}
+.tv-btn::before,.tv-btn::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid rgba(244,123,32,.9);animation:tvRing 2.4s ease-out infinite}
+.tv-btn::after{animation-delay:1.2s}
+@keyframes tvRing{0%{transform:scale(1);opacity:.9}100%{transform:scale(1.9);opacity:0}}
+.tv-play:hover .tv-btn,.tv-play:focus-visible .tv-btn{transform:scale(1.08)}
+.tv-lbl{text-align:center;text-shadow:0 2px 14px rgba(0,0,0,.6)}
+.tv-lbl b{display:block;font-size:1.25rem;font-weight:800;font-stretch:110%}
+.tv-lbl small{display:block;font-size:.88rem;color:#E3EAFB;font-weight:600;margin-top:2px}
+.tv.playing::after,.tv.playing .tv-play,.tv.playing .tv-mute,.tv.playing .tv-live{opacity:0;pointer-events:none}
+.tv-end{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;
+  padding:20px;background:rgba(8,16,44,.82);backdrop-filter:blur(6px);animation:tileIn .45s cubic-bezier(.2,.9,.3,1) both}
+.tv-end[hidden]{display:none}
+.tv-end p{font-size:clamp(1.3rem,2.6vw,1.9rem);font-weight:850;font-stretch:112%}
+.tv-end-btns{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.tv.novideo .tv-play,.tv.novideo .tv-mute{display:none}
+
+/* polaroid + card */
+.tst-side{display:grid;gap:22px;align-content:center}
+.polaroid{background:#fff;padding:10px 10px 0;border-radius:6px;transform:rotate(-3deg);box-shadow:0 30px 60px -30px rgba(0,0,0,.9);
+  position:relative;max-width:300px;justify-self:center;transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+.polaroid:hover{transform:rotate(0) scale(1.03)}
+.polaroid::before{content:"";position:absolute;top:-12px;left:50%;width:90px;height:24px;margin-left:-45px;background:rgba(255,226,190,.75);
+  transform:rotate(2deg);box-shadow:0 2px 6px rgba(0,0,0,.15)}
+.polaroid img{width:100%;height:auto;aspect-ratio:739/683;object-fit:cover;border-radius:2px}
+.polaroid figcaption{color:var(--navy);font-size:.88rem;font-weight:650;font-style:italic;text-align:center;padding:10px 4px 12px;line-height:1.3}
+.tst-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:20px;backdrop-filter:blur(6px)}
+.tst-ticks{list-style:none;display:grid;gap:9px;margin-bottom:16px}
+.tst-ticks li{display:flex;gap:10px;font-size:.93rem;font-weight:600;color:#E3EAFB;line-height:1.4}
+.tst-ticks svg{width:18px;height:18px;flex:0 0 auto;color:var(--orange);margin-top:2px}
+.tst-ticks a{color:#fff}
 
 /* ---------- face-to-face meeting ---------- */
 .btn-meet{background:#fff;color:var(--navy)}
@@ -461,7 +510,7 @@ img.noimg{visibility:hidden}
 .btn-navy svg,.btn-meet svg{color:var(--orange)}
 .meet-float{position:fixed;right:20px;bottom:94px;z-index:45;display:flex;flex-direction:row-reverse;align-items:center;gap:10px;border:0;background:none;padding:0}
 .meet-float .fab{width:58px;height:58px;border-radius:50%;background:var(--navy);display:grid;place-items:center;
-  box-shadow:0 14px 30px -12px rgba(12,27,77,.75);transition:transform .2s;position:relative}
+  box-shadow:0 0 0 3px #fff,0 14px 30px -12px rgba(12,27,77,.75);transition:transform .2s;position:relative}
 .meet-float .fab::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:2px solid var(--orange);opacity:0;animation:meetPulse 2.8s ease-out infinite}
 @keyframes meetPulse{0%{opacity:.8;transform:scale(.9)}70%,100%{opacity:0;transform:scale(1.25)}}
 .meet-float .fab svg{width:26px;height:26px;color:#fff}
@@ -508,8 +557,6 @@ img.noimg{visibility:hidden}
   .ftr-grid{grid-template-columns:1fr 1fr}
 }
 @media (max-width:720px){
-  .tst-grid{grid-template-columns:1fr;gap:28px}
-  .tst-media{max-width:460px;width:100%;margin:0 auto}
   .group{grid-template-columns:1fr}
   .group-img{min-height:200px}
   .incl{grid-template-columns:1fr}
@@ -575,6 +622,25 @@ img.noimg{visibility:hidden}
 }
 @media (max-width:980px){
   .bento{grid-template-columns:repeat(2,1fr);grid-auto-rows:210px}
+  .tst-grid{grid-template-columns:1fr;gap:34px}
+  .tv{transform:none}
+  .tst-side{grid-template-columns:minmax(0,.8fr) minmax(0,1fr);align-items:center}
+}
+@media (max-width:640px){
+  .tst{margin-top:50px}
+  .tst::after{font-size:16rem;top:-50px}
+  .tst-head{margin-bottom:24px}
+  .tv{border-radius:16px;margin:0 -4px}
+  .tv-btn{width:70px;height:70px}
+  .tv-btn svg{width:28px;height:28px}
+  .tv-lbl b{font-size:1.05rem}
+  .tv-lbl small{font-size:.8rem}
+  .tv-live,.tv-mute{font-size:.72rem;padding:5px 10px}
+  .tv-live{top:10px;left:10px}.tv-mute{bottom:10px;right:10px}
+  .tv-end{gap:10px}
+  .tv-end .btn{padding:.65rem 1rem;font-size:.9rem}
+  .tst-side{grid-template-columns:1fr}
+  .polaroid{max-width:260px}
 }
 @media (max-width:640px){
   /* phones: a swipeable row of tall cards instead of a cramped grid */
@@ -774,28 +840,44 @@ html.cur-on input,html.cur-on textarea,html.cur-on select{cursor:auto!important}
 
 <!-- ================= VIDEO TESTIMONIAL ================= -->
 <section class="sec tst" id="reviews">
-  <div class="shell tst-grid">
-    <div class="tst-media">
-      <!-- Testimonial video: save it as assets/testimonial.mp4 (MP4, H.264). Until then the photo below is shown. -->
-      <video id="tVid" controls playsinline preload="metadata" poster="assets/testimonial-poster.jpg">
-        <source src="assets/testimonial.mp4" type="video/mp4">
-      </video>
-      <img id="tImg" src="assets/testimonial-poster.jpg" alt="Four Triplix travellers holding the Triplix Holidays flag, with Bugs Bunny and Daffy Duck" loading="lazy" hidden>
-      <span class="tst-badge"><i></i>Real Triplix travellers</span>
+  <div class="shell">
+    <div class="tst-head">
+      <span class="tst-eyebrow"><i></i>Traveller stories, unscripted</span>
+      <h2>Don't take our word for it. <span>Hear it from them.</span></h2>
+      <p>Real travellers who planned their trip with Triplix, in a video they recorded themselves.</p>
     </div>
-    <div class="tst-copy">
-      <span class="tag"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>Traveller stories</span>
-      <h2>Hear it from people who travelled with us</h2>
-      <p>Real customers, real trips. See what travellers say about planning their holiday with Triplix, from the first quote to the flight home.</p>
-      <ul class="cmp-points tst-points">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Every trip planned personally by our team</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Support on phone and WhatsApp before and during travel</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>More traveller photos and videos on our Instagram</li>
-      </ul>
-      <div class="hero-cta">
-        <button class="btn btn-orange" data-quote>Plan My Trip</button>
-        <a class="btn btn-ghost" href="https://www.instagram.com/triplixholidays/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>More on Instagram</a>
-      </div>
+    <div class="tst-grid">
+      <figure class="tv" id="tv">
+        <!-- the video file lives in assets/videos; the cover is a still taken from it -->
+        <video id="tVid" playsinline muted loop preload="none" poster="assets/videos/testimonial-cover.jpg" aria-label="Video testimonial from Triplix travellers">
+          <source src="assets/videos/triplix-testimonial.mp4" type="video/mp4">
+        </video>
+        <span class="tv-live"><i></i>Real Triplix travellers</span>
+        <span class="tv-mute" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M11 5 6 9H2v6h4l5 4zM23 9l-6 6M17 9l6 6"/></svg>Preview, muted</span>
+        <button class="tv-play" id="tPlay" aria-label="Play the traveller video with sound, 26 seconds">
+          <span class="tv-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.6-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg></span>
+          <span class="tv-lbl"><b>Watch their story</b><small>0:26 &middot; with sound</small></span>
+        </button>
+        <div class="tv-end" id="tEnd" hidden>
+          <p>Want a trip like theirs?</p>
+          <div class="tv-end-btns"><button class="btn btn-orange" data-quote>Plan a trip like theirs</button><button class="btn btn-ghost-dark" id="tAgain">Watch again</button></div>
+        </div>
+      </figure>
+      <aside class="tst-side">
+        <figure class="polaroid">
+          <img src="assets/testimonial-poster.jpg" alt="The same four travellers holding the Triplix Holidays flag, with Bugs Bunny and Daffy Duck" loading="lazy" width="739" height="683">
+          <figcaption>Same group, on tour with the Triplix flag</figcaption>
+        </figure>
+        <div class="tst-card">
+          <ul class="tst-ticks">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Every trip planned personally by our team</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Support on phone and WhatsApp throughout</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>More traveller stories on <a href="https://www.instagram.com/triplixholidays/" target="_blank" rel="noopener">@triplixholidays</a></li>
+          </ul>
+          <button class="btn btn-orange full" data-quote>Plan My Trip</button>
+          <button class="btn btn-ghost-dark full" style="margin-top:10px" data-meet><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18M8 14h3v3H8z"/></svg>Book a Face-to-Face Meeting</button>
+        </div>
+      </aside>
     </div>
   </div>
 </section>
@@ -1394,12 +1476,29 @@ $('#cmpGo').addEventListener('click',function(){
   openWA(m);toast('Opening WhatsApp');
 });
 
-/* ---------- video testimonial: fall back to the photo until the video file is added ---------- */
+/* ---------- video testimonial ----------
+   A silent preview loops while the video is on screen; the play button restarts it
+   from the beginning with sound and controls, and an end card follows. */
 (function(){
-  var v=$('#tVid'),src=$('#tVid source'),img=$('#tImg');
-  function noVideo(){v.hidden=true;v.removeAttribute('controls');img.hidden=false}
+  var tv=$('#tv'),v=$('#tVid'),src=$('#tVid source'),end=$('#tEnd');
+  var saveData=navigator.connection&&navigator.connection.saveData,full=false,inView=false;
+  function tryPlay(){var p=v.play();if(p&&p.catch)p.catch(function(){})}
+  function preview(){if(full||reduce||saveData)return;v.muted=true;v.loop=true;if(inView)tryPlay();else v.pause()}
+  function playFull(){
+    full=true;end.hidden=true;tv.classList.add('playing');
+    v.loop=false;v.muted=false;v.controls=true;v.preload='auto';
+    try{v.currentTime=0}catch(e){}
+    tryPlay();v.focus();
+  }
+  $('#tPlay').addEventListener('click',playFull);
+  $('#tAgain').addEventListener('click',playFull);
+  v.addEventListener('ended',function(){if(!full)return;full=false;v.controls=false;tv.classList.remove('playing');end.hidden=false;$('#tAgain').focus()});
+  function noVideo(){tv.classList.add('novideo')}
   src.addEventListener('error',noVideo);v.addEventListener('error',noVideo);
-  if(v.networkState===3)noVideo();   /* NETWORK_NO_SOURCE */
+  if('IntersectionObserver' in window)new IntersectionObserver(function(es){
+    inView=es[0].isIntersecting;
+    if(full){if(!inView)v.pause()}else if(end.hidden)preview();
+  },{threshold:.35}).observe(tv);
 })();
 
 /* ---------- boarding-pass cards ---------- */
@@ -1589,7 +1688,7 @@ $$('img').forEach(function(img){if(img.complete&&img.naturalWidth===0&&img.getAt
   body.appendChild(cur);
   var plane=cur.querySelector('.cur-plane'),dot=cur.querySelector('.cur-dot'),svg=cur.querySelector('svg'),label=cur.querySelector('em');
   var mx=-100,my=-100,px=-100,py=-100,ang=0,lastTx=0,lastTy=0,trailI=0,started=false,running=false,prev=0,curMode='',curWarm=false;
-  var PKG='.pass,.tile,#vietnam .mosaic',LINK='a,button,[role="button"],label,.chip,summary',WARM='.btn-orange,.pass-badge.hot';
+  var PKG='.pass,.tile,#vietnam .mosaic,.tv:not(.playing)',LINK='a,button,[role="button"],label,.chip,summary',WARM='.btn-orange,.pass-badge.hot';
   var canAnimate=typeof cur.animate==='function';
   function mode(m){if(m===curMode)return;if(curMode)cur.classList.remove(curMode);if(m)cur.classList.add(m);curMode=m}
   function setLabel(t){if(label.textContent!==t)label.textContent=t}
@@ -1607,7 +1706,7 @@ $$('img').forEach(function(img){if(img.complete&&img.naturalWidth===0&&img.getAt
     var p=t.closest(PKG);
     if(p){
       var b=t.closest('button,a');
-      setLabel(b&&p.contains(b)&&b!==p?b.textContent.trim():p.classList.contains('tile')?'Explore':p.classList.contains('mosaic')?'Vietnam':'View trip');
+      setLabel(p.classList.contains('tv')?(b&&p.contains(b)&&!b.classList.contains('tv-play')?b.textContent.trim():'Play story'):b&&p.contains(b)&&b!==p?b.textContent.trim():p.classList.contains('tile')?'Explore':p.classList.contains('mosaic')?'Vietnam':'View trip');
       return mode('pkg');
     }
     mode(t.closest(LINK)?'link':'');
