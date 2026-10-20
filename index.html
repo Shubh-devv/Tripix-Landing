@@ -1136,9 +1136,10 @@ html.cur-on input,html.cur-on textarea,html.cur-on select{cursor:auto!important}
     <div class="qbody">
       <div class="meet-modes" role="radiogroup" aria-label="How would you like to meet?">
         <label class="mmode"><input type="radio" name="m-mode" value="Video call" checked><span><b>Video call</b><small>Face to face from anywhere in India</small></span></label>
-        <label class="mmode"><input type="radio" name="m-mode" value="In person at the office"><span><b>In person</b><small>Meet us at our office</small></span></label>
+        <label class="mmode"><input type="radio" name="m-mode" value="In person"><span><b>In person</b><small>Meet us at your preferred location</small></span></label>
       </div>
       <div class="fgrid">
+        <div class="fld wide" id="m-loc-f" style="display:none"><label for="m-loc">Meeting location</label><input id="m-loc" autocomplete="street-address" placeholder="e.g. your home, office or a café, with area and city"><p class="hint" id="m-loc-h">Please tell us where you'd like to meet.</p></div>
         <div class="fld"><label for="m-name">Your name</label><input id="m-name" autocomplete="name"><p class="hint" id="m-name-h">Please enter your name.</p></div>
         <div class="fld"><label for="m-phone">Phone or WhatsApp</label><input id="m-phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="10-digit mobile"><p class="hint" id="m-phone-h">Please enter a 10-digit mobile number.</p></div>
         <div class="fld"><label for="m-date">Preferred date</label><input id="m-date" type="date"><p class="hint" id="m-date-h">Please pick a date.</p></div>
@@ -1640,14 +1641,22 @@ function openMeet(){
   if(!val('m-phone')&&val('q-phone'))$('#m-phone').value=val('q-phone');
   showOv($('#meetOv'),'#m-name');
 }
+/* in-person meetings happen wherever the customer prefers, so ask where */
+[].forEach.call(document.querySelectorAll('input[name="m-mode"]'),function(r){
+  r.addEventListener('change',function(){
+    var on=$('input[name="m-mode"]:checked').value==='In person';
+    $('#m-loc-f').style.display=on?'':'none';
+    if(!on)$('#m-loc-h').classList.remove('show');
+  });
+});
 $('#meetGo').addEventListener('click',function(){
   var name=val('m-name'),phone=val('m-phone').replace(/\D/g,'').slice(-10),date=val('m-date');
-  var bad={name:!name,phone:phone.length!==10,date:!date};
-  ['name','phone','date'].forEach(function(k){$('#m-'+k+'-h').classList.toggle('show',bad[k]);$('#m-'+k).setAttribute('aria-invalid',bad[k])});
-  var first=['name','phone','date'].filter(function(k){return bad[k]})[0];
+  var mode=$('input[name="m-mode"]:checked').value,inPerson=mode==='In person',loc=val('m-loc');
+  var bad={loc:inPerson&&!loc,name:!name,phone:phone.length!==10,date:!date};
+  ['loc','name','phone','date'].forEach(function(k){$('#m-'+k+'-h').classList.toggle('show',bad[k]);$('#m-'+k).setAttribute('aria-invalid',bad[k])});
+  var first=['loc','name','phone','date'].filter(function(k){return bad[k]})[0];
   if(first){$('#m-'+first).focus();return}
-  var mode=$('input[name="m-mode"]:checked').value;
-  var m='Hi Triplix Holidays, I\'d like to book a face-to-face meeting to plan a holiday.\n'+line('Meeting',mode)+line('Name',name)+line('Phone',phone)+
+  var m='Hi Triplix Holidays, I\'d like to book a face-to-face meeting to plan a holiday.\n'+line('Meeting',mode)+(inPerson?line('Meeting location',loc):'')+line('Name',name)+line('Phone',phone)+
     line('Preferred date',day('m-date'))+line('Preferred time',val('m-slot'))+line('City',val('m-city'))+line('Holiday',val('m-dest'));
   openWA(m);toast('Opening WhatsApp');hideOv();
 });
